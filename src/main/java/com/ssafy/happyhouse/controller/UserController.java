@@ -85,10 +85,12 @@ public class UserController {
 	}
 	
 	@PostMapping("/userdelete")
-	public String delete(HttpSession session, Model m) {
+	public String delete(HttpSession session,Model m) {
 		try {
 			User user= (User)session.getAttribute("userinfo");
+			Interest inter =(Interest) session.getAttribute("interest_info");
 			uService.delete(user.getId());
+			iService.delete(user.getId(),inter.getDong());
 			if(session!=null)session.invalidate();
 			
 			m.addAttribute("msg","탈퇴 완료 ㅠㅠ");

@@ -8,6 +8,6 @@
 		insert into interest values(#{id},#{city},#{gugun},#{dong})
 	</insert>
 	<delete id="delete">
-	delete from interest where dong=#{dong}
+	delete from interest where id=#{id}
 	</delete>
 </mapper>
