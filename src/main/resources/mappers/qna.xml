@@ -14,7 +14,7 @@
 
 	<insert id="create">
 		insert into qna(isbn, title, author, content, time) 
-		values (#{isbn}, #{title}, #{author}, #{content} ,#{time})
+		values (#{isbn}, #{title}, #{author}, #{content} ,now())
 	</insert>
 	
 	<update id="modify">
