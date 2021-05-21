@@ -15,9 +15,10 @@
 <link href="${root}/js/chunk-a9fd5850.74463a06.js" rel="prefetch">
 <link href="${root}/js/chunk-d4936658.ecbda978.js" rel="prefetch">
 <link href="${root}/css/app.c63e254f.css" rel="preload" as="style">
-<link href="${root}/js/app.037342b9.js" rel="preload" as="script">
+<link href="${root}/js/app.fd99e2bb.js" rel="preload" as="script">
 <link href="${root}/js/chunk-vendors.b925e34b.js" rel="preload" as="script">
 <link href="${root}/css/app.c63e254f.css" rel="stylesheet">
+
 </head>
 <body>
 <section id="qna">
@@ -31,9 +32,10 @@
 		<strong>We're sorry but happyvue doesn't work properly
 			without JavaScript enabled. Please enable it to continue.</strong>
 	</noscript>
-	<div id="app"></div>
+	<div id="app"></div>	
 	<script src="${root}/js/chunk-vendors.b925e34b.js"></script>
-	<script src="${root}/js/app.037342b9.js"></script>
+	<script src="${root}/js/app.fd99e2bb.js"></script>
+
 </div>
 </section>
 </body>
