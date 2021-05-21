@@ -74,6 +74,10 @@
 			<!-- ======= 공지사항 Section ======= -->
 			<%@ include file="notice.jsp" %>
 		
+		<!-- ======= 공지사항 Section ======= -->
+			<%@ include file="qna.jsp" %>
+			
+			
 		
     </main><!-- End #main -->
 

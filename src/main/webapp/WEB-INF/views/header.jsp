@@ -9,6 +9,7 @@
           <ul>
           <li><a href="#detail">주택검색</a></li>
 			<li><a href="#info">공지사항</a></li>
+			<li><a href="#qna">Q&A</a></li>
 			<c:if test="${!empty userinfo and empty interest_info}">
 			<li><a href="#star">관심지역</a></li>
 			</c:if>

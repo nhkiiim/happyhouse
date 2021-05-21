@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<section id="detail" class="portfolio section-bg">
+<section id="detail">
 		<div class="container">
 		<div class="section-title" data-aos="fade-down">
 			<span>search</span>

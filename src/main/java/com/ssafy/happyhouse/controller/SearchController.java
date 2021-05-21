@@ -23,6 +23,11 @@ public class SearchController {
 		return "index";
 	}
 	
+	@GetMapping({"/qna"})
+	public String qna() {
+		return "qna";
+	}
+	
 	@PostMapping({"email"})
 	public String email() {
 		return "index";
