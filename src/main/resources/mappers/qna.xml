@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.happyhouse.model.mapper.QnaMapper">
+	<select id="list" resultType="qnaDto">
+		select isbn, title, author, content, time
+		from qna
+	</select>
+	
+	<select id="search" resultType="qnaDto">
+		select  isbn, title, author, content, time
+		from qna where isbn=#{isbn}
+	</select>
+
+	<insert id="create">
+		insert into qna(isbn, title, author, content, time) 
+		values (#{isbn}, #{title}, #{author}, #{content} ,#{time})
+	</insert>
+	
+	<update id="modify">
+		update qna set title=#{title}, author=#{author}, content=#{content}, time=#{time} 
+		where isbn=#{isbn}
+	</update>
+
+	<delete id="delete">
+		delete from qna 
+		where isbn=#{isbn}
+	</delete>
+</mapper>
