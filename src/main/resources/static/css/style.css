@@ -1148,36 +1148,36 @@ section {
 /*--------------------------------------------------------------
 # F.A.Q
 --------------------------------------------------------------*/
-.faq {
+.notice {
   background: #f3faf6;
   padding: 60px 0;
 }
 
-.faq .section-title span {
+.notice .section-title span {
   color: #f1f1f1;
 }
 
-.faq .faq-list {
+.notice .notice-list {
   padding: 0 100px;
 }
 
-.faq .faq-list ul {
+.notice .notice-list ul {
   padding: 0;
   list-style: none;
 }
 
-.faq .faq-list li + li {
+.notice .notice-list li + li {
   margin-top: 15px;
 }
 
-.faq .faq-list li {
+.notice .notice-list li {
   padding: 20px;
   background: #fff;
   border-radius: 4px;
   position: relative;
 }
 
-.faq .faq-list a {
+.notice .notice-list a {
   display: block;
   position: relative;
   font-family: "Poppins", sans-serif;
@@ -1188,7 +1188,7 @@ section {
   outline: none;
 }
 
-.faq .faq-list .icon-help {
+.notice .notice-list .icon-help {
   font-size: 24px;
   position: absolute;
   right: 0;
@@ -1196,40 +1196,40 @@ section {
   color: #a8dabc;
 }
 
-.faq .faq-list .icon-show, .faq .faq-list .icon-close {
+.notice .notice-list .icon-show, .notice .notice-list .icon-close {
   font-size: 24px;
   position: absolute;
   right: 0;
   top: 0;
 }
 
-.faq .faq-list p {
+.notice .notice-list p {
   margin-bottom: 0;
   padding: 10px 0 0 0;
 }
 
-.faq .faq-list .icon-show {
+.notice .notice-list .icon-show {
   display: none;
 }
 
-.faq .faq-list a.collapsed {
+.notice .notice-list a.collapsed {
   color: #343a40;
 }
 
-.faq .faq-list a.collapsed:hover {
+.notice .notice-list a.collapsed:hover {
   color: #4eb478;
 }
 
-.faq .faq-list a.collapsed .icon-show {
+.notice .notice-list a.collapsed .icon-show {
   display: inline-block;
 }
 
-.faq .faq-list a.collapsed .icon-close {
+.notice .notice-list a.collapsed .icon-close {
   display: none;
 }
 
 @media (max-width: 1200px) {
-  .faq .faq-list {
+  .notice .notice-list {
     padding: 0;
   }
 }

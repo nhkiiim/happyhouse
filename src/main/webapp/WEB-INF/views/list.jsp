@@ -7,10 +7,11 @@
             <h2>search</h2>
 		</div>
 
-		<div class="row mb-5">
-			<div class="col-12 d-flex flex-row justify-content-center">
-				<form id="listform" action="search" method="get" class="d-flex flex-row">
-					<select  class="form-control mr-2" name="searchField">
+		<div class="row mb-3">
+			<div class="col-md-6 flex-row" style="float: none; margin: 0 auto;">
+				<form id="listform" action="search" method="get"
+					class="d-flex flex-row">
+					<select class="form-control mr-2 col-2" name="searchField">
 						<option value="LIST">전체</option>
 						<option value="APTNAME"
 							<c:if test="${searchField == 'APTNAME'}">selected</c:if>>아파트명
@@ -19,20 +20,21 @@
 							<c:if test="${searchField == 'PRICE'}">selected</c:if>>가격</option>
 						<option value="DONG"
 							<c:if test="${searchField == 'DONG'}">selected</c:if>
-							<c:if test="${!empty interest_info}">selected</c:if>
-							>동</option>
-					</select> 
+							<c:if test="${!empty interest_info}">selected</c:if>>동</option>
+					</select>
 					<c:if test="${searchText==null}">
-					<input class="form-control mr-2" type="text" name="searchText" value="${interest_info.dong}">
+						<input class="form-control mr-2" type="text" name="searchText"
+							value="${interest_info.dong}">
 					</c:if>
 					<c:if test="${searchText!=null}">
-					<input class="form-control mr-2" type="text" name="searchText" value="${searchText}">
+						<input class="form-control mr-2" type="text" name="searchText"
+							value="${searchText}">
 					</c:if>
-					<input class="btn btn-secondary" type="submit" value="Search">
+					<input class="btn btm-sm col-2" type="submit" value="Search">
 				</form>
-				</div>
 			</div>
 		</div>
+	</div>
 		
 		<c:if test="${empty housedeals}">
 		<div class="container text-center mb-5 mt-3">
