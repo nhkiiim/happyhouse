@@ -35,7 +35,7 @@
 				<!-- Modal footer -->
 				<div class="modal-footer">
 					<div class="container d-flex justify-content-center">
-						<button type="button" class="btn btn-success mr-2" data-dismiss="modal">확인</button>
+						<button type="button" class="btn btn-success mr-2 col-3" data-dismiss="modal">확인</button>
 					</div>
 				</div>
 			</div>

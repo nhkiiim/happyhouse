@@ -57,7 +57,7 @@ $(function(){
 				<!-- Modal footer -->
 				<div class="modal-footer">
 					<div class="container d-flex justify-content-center">
-						<button id="findbutton" type="button" class="btn btn-success mr-2">찾기</button>
+						<button id="findbutton" type="button" class="btn btn-success mr-2 col-3">찾기</button>
 					</div>
 				</div>
 			</div>

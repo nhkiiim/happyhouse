@@ -32,7 +32,7 @@
 				</div>
 				<!-- Modal footer -->
 				<div class="modal-footer">
-					<button id="btn-login" type="submit" form="userlogin" class="btn btn-success">로그인</button>
+					<button id="btn-login" type="submit" form="userlogin" class="btn btn-success col-3">로그인</button>
 				</div>
 			</div>
 		</div>

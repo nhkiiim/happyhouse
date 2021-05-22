@@ -45,7 +45,7 @@
 				</div>
 				<!-- Modal footer -->
 				<div class="modal-footer">
-					<button type="submit" form="joinform" class="btn btn-success">회원가입!</button>
+					<button type="submit" form="joinform" class="btn btn-success col-4">회원가입!</button>
 				</div>
 			</div>
 		</div>

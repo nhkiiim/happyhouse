@@ -45,7 +45,7 @@
 				</div>
 				<!-- Modal footer -->
 				<div class="modal-footer">
-						<button type="submit" form="modifyform" class="btn btn-success">수정</button>
+						<button type="submit" form="modifyform" class="btn btn-success col-3">수정</button>
 				</div>
 			</div>
 		</div>

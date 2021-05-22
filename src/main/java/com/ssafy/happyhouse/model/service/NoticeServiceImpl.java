@@ -1,10 +1,12 @@
 package com.ssafy.happyhouse.model.service;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.ssafy.happyhouse.dto.HouseDeal;
 import com.ssafy.happyhouse.dto.Notice;
 import com.ssafy.happyhouse.model.repo.NoticeRepo;
 
@@ -32,6 +34,11 @@ public class NoticeServiceImpl implements NoticeService {
 	@Override
 	public void delete(int notice_no) throws SQLException {
 		nrepo.delete(notice_no);
+	}
+	
+	@Override
+	public List<Notice> search() throws SQLException {
+		return nrepo.search();
 	}
 
 }
