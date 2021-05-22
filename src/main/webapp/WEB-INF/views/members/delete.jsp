@@ -14,7 +14,7 @@
 				<form action="userdelete" method="post" id="deleform">
 				</form>
 				<div class="modal-footer justify-content-center">
-						<button type="button" class="btn btn-success col-3" data-dismiss="modal">아니요</button>
+						<button type="button" class="btn btn-success col-3 mr-3" data-dismiss="modal">아니요</button>
 						<button type="submit" class="btn btn-danger col-2" form="deleform">네</button>
 				</div>
 			</div>

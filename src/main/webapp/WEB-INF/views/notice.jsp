@@ -8,6 +8,9 @@
 		<div class="section-title" data-aos="fade-down">
 			<span>공지사항</span>
 			<h2>공지사항</h2>
+			<div class="mt-4 mb-3">
+		  	<button type="button" onclick="location.href='${root}/noriceregist'" class="btn btn-success">등록</button>
+        </div>
 			<!-- <p>공지사항입니다.</p> -->
 		</div>
 

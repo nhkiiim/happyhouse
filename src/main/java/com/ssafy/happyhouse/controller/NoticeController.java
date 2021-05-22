@@ -27,7 +27,7 @@ public class NoticeController {
 	NoticeService nService;
 
 	@GetMapping("/notice" )
-	public String list(HttpSession session, int notice_no,Model m) throws SQLException {
+	public String list(int notice_no,Model m) throws SQLException {
 		List<Notice> notices= null;
 		notices = nService.search();
 		m.addAttribute("notices", notices);
