@@ -13,15 +13,15 @@
 				<!-- Modal body -->
 				<div class="modal-body">
 					<div class="container">
-					<form action="insert" method="post" class="was-validated" id="joinform">
+					<form action="insertNotice" method="post" id="insertnoticeform">
 						<div class="form-group mt-2 mb-2">
 						<div class="row mb-3">
-							<label class="col-md-3" for="nTitle">제목 *</label>
-							<input class="col-md-9 form-control" id="nTitle" name="title" type="text" required>
+							<label class="col-md-3" for="nTitle">제목 </label><br>
+							<input class="col-md-9 form-control" id="nTitle" name="title" type="text">
 						</div>
 						<div class="row mb-3">
-							<label class="col-md-3" for="nContent">내용 *</label>
-							<input class="col-md-9 form-control" id="nContent" name="content" type="text" required>
+							<label class="col-md-3" for="nContent">내용 </label><br>
+							<textarea class="col-md-9 form-control h-25" rows="10" id="nContent" name="content"></textarea>
 						</div>
 						</div>
 					</form>
@@ -29,7 +29,7 @@
 				</div>
 				<!-- Modal footer -->
 				<div class="modal-footer">
-					<button type="submit" form="insertform" class="btn btn-success col-4">등록!</button>
+					<button type="submit" form="insertnoticeform" class="btn btn-success col-4">등록</button>
 				</div>
 			</div>
 		</div>

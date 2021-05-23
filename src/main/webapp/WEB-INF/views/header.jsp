@@ -41,22 +41,26 @@
 <header id="header" class="d-flex align-items-center">
  
       <div class="container d-flex align-items-center">
-        <div class="logo mr-auto nav-menu d-none d-lg-block">
+        <nav class="nav-menu d-none d-lg-block">
           <ul>
           <li><a href="#detail">주택검색</a></li>
-			<li><a href="#notice">공지사항</a></li>
-			<li><a href="#qna">Q&A</a></li>
+		
 			<c:if test="${!empty userinfo and empty interest_info}">
 			<li><a href="#star">관심지역</a></li>
 			</c:if>
 			<c:if test="${!empty userinfo and !empty interest_info}">
 			<li><a href="#search">관심지역</a></li>
 			</c:if>
-			<li><a href="#footer">팀 소개</a></li>
+			<c:if test="${!empty userinfo}">
+			<li><a href="#notice">공지사항</a></li>
+			<li><a href="#qna">Q&A</a></li>
+			</c:if>
+			<li><a href="#introduce">소개</a></li>
+			<li><a href="#testimonials">팀</a></li>
           </ul>
-         </div>
+         </nav>
 
-        <nav class="nav-menu d-none d-lg-block">
+        <div class="logo nav-menu ml-auto d-none d-lg-block">
         
         <ul>
           
@@ -72,6 +76,6 @@
 			<li><a href="#" class="loginoff"  data-toggle="modal"data-target="#out">탈퇴</a></li>
 			</c:if>
           </ul>
-        </nav>
+        </div>
       </div>
     </header>

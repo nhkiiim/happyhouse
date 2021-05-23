@@ -3,6 +3,8 @@ package com.ssafy.happyhouse.controller;
 import java.sql.SQLException;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,8 +13,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.ssafy.happyhouse.dto.HouseDeal;
 import com.ssafy.happyhouse.dto.Notice;
+import com.ssafy.happyhouse.dto.QnaDto;
 import com.ssafy.happyhouse.model.service.HouseDealService;
 import com.ssafy.happyhouse.model.service.NoticeService;
+import com.ssafy.happyhouse.model.service.QnaService;
 
 @Controller
 public class SearchController {
@@ -21,12 +25,14 @@ public class SearchController {
 	HouseDealService hService;
 	@Autowired
 	NoticeService nService;
+	@Autowired
+	QnaService qService;
 	
 	@GetMapping({"/","/index"})
-	public String index(Model m) throws SQLException {
+	public String index(HttpSession session) throws SQLException {
 		List<Notice> notices= null;
 		notices = nService.search();
-		m.addAttribute("notices", notices);
+		session.setAttribute("notices", notices);
 		return "index";
 	}
 	

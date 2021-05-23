@@ -9,19 +9,19 @@
 			<span>Notice</span>
 			<h2>Notice</h2>
 			<div class="mt-4 mb-3">
-		  	<%-- <button type="button" onclick="location.href='${root}/noriceregist'" class="btn btn-success">등록</button> --%>
-		  	<button href="#" class="loginon" id="insertNotice" data-toggle="modal" data-target="#insertnoticeModal">공지 등록</button>
+			<c:if test="${userinfo.id eq 'admin'}">
+		<a href="#" class="loginon mb-3" id="insertNotice" data-toggle="modal" data-target="#insertnoticeModal">공지 등록</a>
+       </c:if>
+       <c:if test="${empty notices}">
+			<p class="mt-5">등록된 공지사항이 없습니다.</p>
+		</c:if>
         </div>
 			<!-- <p>공지사항입니다.</p> -->
 		</div>
 
-
-		<c:if test="${empty notices}">
-			<p>등록된 공지사항이 없습니다.</p>
-		</c:if>
 		
 		<c:if test="${!empty notices}">
-			<div class="notice-list">
+			<div class="notice-list mb-5">
 				<ul>
 				<% int delay = 0; int nhref=1; String href = "notice-list-"; %>
 				<c:forEach var="notice" items="${notices}" varStatus="vs">

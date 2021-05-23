@@ -28,14 +28,11 @@
 		<div class="container">
 		<div class="section-title" data-aos="fade-down">
 			<span>Q&A</span>
-            <h2>Q&A</h2>
+            <h2><a href="${root}">Q&A</a></h2>
 		</div>
 <div class="row mb-5">
 	<div class="col-md-10 flex-row" style="float: none; margin: 0 auto;">
-	<noscript>
-		<strong>We're sorry but happyvue doesn't work properly
-			without JavaScript enabled. Please enable it to continue.</strong>
-	</noscript>
+		
 	<div id="app"></div>	
 	<script src="${root}/js/chunk-vendors.ba03c677.js"></script>
 	<script src="${root}/js/app.6cda1189.js"></script>

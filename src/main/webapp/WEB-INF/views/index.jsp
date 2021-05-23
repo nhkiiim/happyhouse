@@ -44,12 +44,17 @@
 				<%@ include file="interest.jsp"%>
 			</c:if>
 
+			<c:if test="${!empty userinfo}">
 			<!-- ======= 공지사항 Section ======= -->
 			<%@ include file="notice.jsp"%>
-
+			
 			<!-- ======= QnA Section ======= -->
 			<%@ include file="qna.jsp"%>
-
+			</c:if>
+			
+			
+			<%@ include file="introduce.jsp"%>
+			<%@ include file="team.jsp"%>
 
 
 		</main>
@@ -85,6 +90,8 @@
 	<!-- Modal findpass -->
 	<%@ include file="/WEB-INF/views/members/findpass.jsp"%>
 
+	<!-- Modal Notice -->
+	<%@ include file="/WEB-INF/views/insertnotice.jsp"%>
 
 	<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 

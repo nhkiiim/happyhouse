@@ -4,7 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="root" value="${pageContext.request.contextPath}"/>
     
-<section id="search" class="search">
+<section id="search" class="portfolio section-bg">
         <div class="container">
 			<div class="section-title" data-aos="fade-down">
             <span>Region of Interest</span>
@@ -34,7 +34,7 @@
             </form>
        		-->
        		
-	      	<h5>관심지역&nbsp; :&nbsp; ${interest_info.city}&nbsp; ${interest_info.gugun}&nbsp; ${interest_info.dong}</h5>
+	      	<p class="mt-2 mb-2">관심지역&nbsp; :&nbsp; ${interest_info.city}&nbsp; ${interest_info.gugun}&nbsp; ${interest_info.dong}</p>
           </div>
            
     	  

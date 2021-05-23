@@ -16,6 +16,7 @@ import com.ssafy.happyhouse.dto.Interest;
 import com.ssafy.happyhouse.dto.User;
 import com.ssafy.happyhouse.model.service.BaseAddressService;
 import com.ssafy.happyhouse.model.service.InterestService;
+import com.ssafy.happyhouse.model.service.UserService;
 
 @Controller
 public class InterestController {
@@ -24,12 +25,16 @@ public class InterestController {
 	InterestService iService;
 
 	@Autowired
+	UserService uService;
+	
+	@Autowired
 	BaseAddressService bService;
 
 	@GetMapping("/interdelete")
 	public String interdelete(HttpSession session,Interest interest_info,Model m) throws SQLException {
 		try {
-			iService.delete(interest_info.getId(), interest_info.getDong());
+			User user= (User)session.getAttribute("userinfo");
+			iService.delete(user.getId(), interest_info.getDong());
 			if(session!=null) {
 				session.removeAttribute("address_info");
 				session.removeAttribute("interest_info");

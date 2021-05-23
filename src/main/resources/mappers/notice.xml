@@ -6,7 +6,7 @@
 		select * from notice where notice_no=#{notice_no}
 	</select>
 	<insert id="insert" >
-	insert into notice values (#{notice_no},#{title},#{content},#{notice_time})
+	insert into notice values (#{notice_no},#{title},#{content},now())
 	</insert>
 	<update id="modify">
 	update notice set notice_no=#{notice_no}, title=#{title}, content=#{content},notice_time=#{notice_time} where notice_no=#{notice_no} 

@@ -39,7 +39,6 @@
 		<c:if test="${empty housedeals}">
 		<div class="container text-center mb-5 mt-3">
 		<img src="${root}/img/apt.jpg" width="500px" height="300px">
-		
 		</div>
 		</c:if>
 		<c:if test="${!empty housedeals}">

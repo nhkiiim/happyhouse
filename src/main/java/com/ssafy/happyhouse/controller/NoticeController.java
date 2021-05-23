@@ -27,23 +27,26 @@ public class NoticeController {
 	NoticeService nService;
 
 	@GetMapping("/notice" )
-	public String list(int notice_no,Model m) throws SQLException {
+	public String list(int notice_no,HttpSession session) throws SQLException {
 		List<Notice> notices= null;
 		notices = nService.search();
-		m.addAttribute("notices", notices);
+		session.setAttribute("notices", notices);
 		return "index";
 	}
 	
 
-	@PostMapping("/noticeregist")
-	public String noticeregist(Notice notice,Model m) {
+	@PostMapping("/insertNotice")
+	public String noticeregist(Notice notice,HttpSession session,Model m) {
 		
 			try {
 				nService.insert(notice);
-				m.addAttribute("msg",notice.getNotice_no() + "번 공지사항 등록 성공 ");
+				List<Notice> notices= null;
+				notices = nService.search();
+				session.setAttribute("notices", notices);
+				m.addAttribute("msg","공지사항 등록 성공 ");
 
 			}catch(SQLIntegrityConstraintViolationException e) {
-				m.addAttribute("msg",notice.getNotice_no() + "번 공지사항 등록 실패 ");
+				m.addAttribute("msg","공지사항 등록 실패 ");
 
 			}catch(Exception e) {
 				e.printStackTrace();

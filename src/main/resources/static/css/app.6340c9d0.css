@@ -4,7 +4,7 @@
 
 a {
 	text-decoration: none;
-	color: #787878
+	color: #4eb478	
 }
 
 .regist {
@@ -18,7 +18,7 @@ a {
 	padding: 20px
 }
 
-.view, input, textarea {
+.view,.regist_form input,.regist_form textarea {
 	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;
