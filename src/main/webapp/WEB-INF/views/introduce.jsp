@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-      <section id="introduce" class="services section-bg"">
+      <section id="introduce" class="services section-bg">
         <div class="container">
 
           <div class="section-title mb-5" data-aos="fade-down">
             <span>Introduce</span>
             <h2>Introduce</h2>
-            <p>아파트 매물을 편리하게 검색할 수 있는 Happy House Service!</p>
+            <h6 class="mt-2">Spring10Jo의 아파트 매물을 편리하게 검색할 수 있는 Happy House Service!</h6>
           </div>
 
           <div class="row mb-5">
