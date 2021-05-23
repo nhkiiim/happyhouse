@@ -10,16 +10,23 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.ssafy.happyhouse.dto.HouseDeal;
+import com.ssafy.happyhouse.dto.Notice;
 import com.ssafy.happyhouse.model.service.HouseDealService;
+import com.ssafy.happyhouse.model.service.NoticeService;
 
 @Controller
 public class SearchController {
 
 	@Autowired
 	HouseDealService hService;
+	@Autowired
+	NoticeService nService;
 	
 	@GetMapping({"/","/index"})
-	public String index() {
+	public String index(Model m) throws SQLException {
+		List<Notice> notices= null;
+		notices = nService.search();
+		m.addAttribute("notices", notices);
 		return "index";
 	}
 	

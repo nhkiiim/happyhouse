@@ -8,12 +8,12 @@
 	<insert id="insert" >
 	insert into notice values (#{notice_no},#{title},#{content},#{notice_time})
 	</insert>
+	<update id="modify">
+	update notice set notice_no=#{notice_no}, title=#{title}, content=#{content},notice_time=#{notice_time} where notice_no=#{notice_no} 
+	</update>
 	<delete id="delete">
 	delete from notice where notice_no=#{notice_no}
 	</delete>
-	<update id="update">
-	update notice set notice_no=#{notice_no}, title=#{title}, content=#{content},notice_time=#{notice_time} where notice_no=#{notice_no} 
-	</update>
 	<select id="search" resultType="Notice">
 		select * from notice limit 10
 	</select>

@@ -15,10 +15,10 @@
 					<div class="owl-carousel testimonials-carousel" data-aos="zoom-in">
 
 						<div class="testimonial-item">
-							<img src="${root}/img/testimonials/testimonials-1.jpg"
+							<img src="${root}/img/team/kim.jpg"
 								class="testimonial-img" alt="">
 							<h3>김나현</h3>
-							<h4>Ceo &amp; Founder</h4>
+							<h4>Leader <!-- &amp; Founder --></h4>
 							<p>
 								<i class="bx bxs-quote-alt-left quote-icon-left"></i> Proin
 								iaculis purus consequat sem cure digni ssim donec porttitora
@@ -29,10 +29,10 @@
 						</div>
 
 						<div class="testimonial-item">
-							<img src="${root}/img/testimonials/testimonials-2.jpg"
+							<img src="${root}/img/team/jung.jpg"
 								class="testimonial-img" alt="">
 							<h3>정소영</h3>
-							<h4>Designer</h4>
+							<h4>Coworker</h4>
 							<p>
 								<i class="bx bxs-quote-alt-left quote-icon-left"></i> Export
 								tempor illum tamen malis malis eram quae irure esse labore quem

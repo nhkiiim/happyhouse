@@ -9,6 +9,9 @@
 	<select id="select" resultType="HouseDeal">
 		select * from housedeal where no=#{no} limit 10
 	</select>
+	<select id="selectPrice" resultType="HouseDeal">
+		<!-- select * from housedeal where cast(dealAmount AS signed integer) <= cast(#{searchText} AS signed integer) limit 10 -->
+	</select>
 	<select id="selectAptName" resultType="HouseDeal">
 		select * from housedeal where AptName like concat('%',#{searchText},'%') limit 10
 	</select>
