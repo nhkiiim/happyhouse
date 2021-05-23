@@ -33,7 +33,6 @@
 		<main id="main">
 			<!-- ======= 주택검색 Section ======= -->
 			<%@include file="list.jsp"%>
-			<%@include file="detail.jsp"%>
 			<c:if test="${!empty interest_info}">
 				<!-- ====== 관심지역 Section ======= -->
 				<%@include file="map.jsp"%>

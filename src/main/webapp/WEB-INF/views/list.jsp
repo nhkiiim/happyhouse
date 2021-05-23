@@ -36,12 +36,11 @@
 		</div>
 	</div>
 		
-		<c:if test="${empty housedeals}">
+		<c:if test="${empty housedeals and empty housedeal}">
 		<div class="container text-center mb-5 mt-3">
-		<img src="${root}/img/apt.jpg" width="500px" height="300px">
 		</div>
 		</c:if>
-		<c:if test="${!empty housedeals}">
+		<c:if test="${!empty housedeals and empty housedeal}">
 			<div class="container text-center mb-5">
 				<form action="search" method="post">
 					<div class="w3-padding w3-white notranslate mt-5 mb-5">
@@ -81,5 +80,9 @@
 				</form>
 			</div>
 		</c:if>
+		<c:if test="${!empty housedeal}">
+		<%@ include file="detail.jsp" %>
+		</c:if>
+		
 		<!-- 테이블 -->
 </section>

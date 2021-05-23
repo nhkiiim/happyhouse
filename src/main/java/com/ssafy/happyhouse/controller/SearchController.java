@@ -70,9 +70,18 @@ public class SearchController {
 	}
 	
 	@GetMapping("/view")
-	public String view(int no,Model m) throws SQLException {
+	public String view(int no, Model m) throws SQLException {
 		HouseDeal housedeal=hService.select(no); 
-		m.addAttribute("housedeal", housedeal);		
-		return "view";
+		m.addAttribute("housedeal", housedeal);	
+		return "index";
+	}
+	
+	@GetMapping("/detailmap")
+	public String detailmap(String name, Model m) throws SQLException {
+		List<HouseDeal> housedeal=null;
+				housedeal=hService.selectAptName(name);
+		HouseDeal h= housedeal.get(0);
+		m.addAttribute("housedeal", h);	
+		return "index";
 	}
 }

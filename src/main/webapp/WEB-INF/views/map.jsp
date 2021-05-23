@@ -253,14 +253,15 @@
 			map = new google.maps.Map(document.getElementById("map"), opt);
 			
 			var infowindow = new google.maps.InfoWindow();
-			
+			var myIcon = new google.maps.MarkerImage("${root}/img/like.png", null, null, null, new google.maps.Size(23,23));
+
 			//핑찍기
 			var marker, i;
 			for (i = 0; i < locations.length; i++) {  
 			marker = new google.maps.Marker({
 			id:i,
-			title : locations[i][0],
-			label : locations[i][0],
+			title : locations[i][3],
+			icon: myIcon,
 			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
 			map: map
 			}); 
@@ -268,7 +269,7 @@
 			//핑 클릭
 			google.maps.event.addListener(marker, 'click', (function(marker, i) {
 			return function() {
-			infowindow.setContent(locations[i][0]);
+			infowindow.setContent(locations[i][3]);
 			infowindow.open(map, marker);
 			}
 			})(marker, i));

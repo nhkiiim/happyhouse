@@ -19,7 +19,7 @@ a {
 }
 
 a:hover {
-  color: #72c393;
+  color: #4eb478;
   text-decoration: none;
 }
 
@@ -574,9 +574,11 @@ section {
   border-radius: 5px;
   overflow: hidden;
   border: 0;
-  background: #f7f7f7;
-  position: relative;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  background: #fff;
+   position: relative;
   transition: 0.3s;
+  
 }
 
 .features .card-body {
@@ -613,12 +615,11 @@ section {
 }
 
 .features .card:hover {
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  background: #fff;
+ 
 }
 
 .features .card:hover .card-title a {
-  color: #4eb478;
+  color: #fff;
 }
 
 @media (max-width: 1024px) {

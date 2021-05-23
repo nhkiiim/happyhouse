@@ -12,28 +12,33 @@
                 <img src="${root}/img/building.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">${housedeal.aptName}</h5>
-                  <p class="card-text"></p>
+                  <p class="card-text">
+                  </p>
                 </div>
               </div>
             </div>
             
-            <div class="col-lg-6">
-            	<h3>아파트 상세 정보</h3>
-            	<ul>
-            		<li>${housedeal.no}</li>
-					<li>${housedeal.dong}</li>
-					<li>${housedeal.aptName}</li>
-					<li>${housedeal.code}</li>
-					<li>${housedeal.dealAmount}</li>
-					<li>${housedeal.buildYear}</li>
-					<li>${housedeal.dealYear}</li>
-					<li>${housedeal.dealMonth}</li>
-					<li>${housedeal.dealDay}</li>
-					<li>${housedeal.area}</li>
-					<li>${housedeal.floor}</li>
-					<li>${housedeal.jibun}</li>
-				</ul>
+            <div class="col-lg-5">
+            	<%-- <h3 class= "mb-4">아파트 상세 정보</h3>
+            	<ul class="list-group">
+					<li class="list-group-item"><strong>위치 : </strong>&nbsp;&nbsp;&nbsp;${housedeal.dong}</li>
+					<li class="list-group-item"><strong>거래금액 : </strong>&nbsp;&nbsp;&nbsp;${housedeal.dealAmount}</li>
+					<li class="list-group-item"><strong>완공년도 : </strong>&nbsp;&nbsp;&nbsp;${housedeal.buildYear}</li>
+					<li class="list-group-item"><strong>거래일자 : </strong>&nbsp;&nbsp;&nbsp;${housedeal.dealYear}년 ${housedeal.dealMonth}월 ${housedeal.dealDay}</li>
+					<li class="list-group-item"><strong>면적 : </strong>&nbsp;&nbsp;&nbsp;${housedeal.area}</li>
+					<li class="list-group-item"><strong>층 : </strong>&nbsp;&nbsp;&nbsp;${housedeal.floor}</li>
+				</ul> --%>
+				<h3 class= "mb-4">${housedeal.aptName} 상세 정보</h3>
+            	<table class="table">
+					<tr><td><strong>위치</strong></td><td>${housedeal.dong}</td></tr>
+					<tr><td><strong>거래금액</strong></td><td>${housedeal.dealAmount}</td></tr>
+					<tr><td><strong>완공년도</strong></td><td>${housedeal.buildYear}</td></tr>
+					<tr><td><strong>거래일자</strong></td><td>${housedeal.dealYear}년 ${housedeal.dealMonth}월 ${housedeal.dealDay}일</td></tr>
+					<tr><td><strong>면적</strong></td><td>${housedeal.area}</td></tr>
+					<tr><td><strong>층수</strong></td><td>${housedeal.floor}</td></tr>
+				</table>
             </div>
+            <div class="col-lg-1"></div>
           </div>
 
         </div>

@@ -43,6 +43,7 @@
       <div class="container d-flex align-items-center">
         <nav class="nav-menu d-none d-lg-block">
           <ul>
+          <li><a href="${root}">HOME</a></li>
           <li><a href="#detail">주택검색</a></li>
 		
 			<c:if test="${!empty userinfo and empty interest_info}">
