@@ -2,6 +2,7 @@ package com.ssafy.happyhouse.controller;
 
 import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
+import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
@@ -12,9 +13,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.ssafy.happyhouse.dto.BaseAddress;
+import com.ssafy.happyhouse.dto.HouseInfo;
 import com.ssafy.happyhouse.dto.Interest;
 import com.ssafy.happyhouse.dto.User;
 import com.ssafy.happyhouse.model.service.BaseAddressService;
+import com.ssafy.happyhouse.model.service.HouseInfoService;
 import com.ssafy.happyhouse.model.service.InterestService;
 import com.ssafy.happyhouse.model.service.UserService;
 
@@ -29,6 +32,9 @@ public class UserController {
 
 	@Autowired
 	BaseAddressService bService;
+	
+	@Autowired
+	HouseInfoService hiService;
 
 	@PostMapping("/login")
 	public String login(User user,HttpSession session, Model m) throws SQLException {
@@ -38,6 +44,8 @@ public class UserController {
 			
 			Interest interest=iService.select(user.getId());
 			if(interest!=null) {
+				List<HouseInfo> hi = hiService.searchInfo();
+				session.setAttribute("house_info", hi);
 				session.setAttribute("interest_info",interest);
 				BaseAddress ba= bService.select(interest.getDong());
 				session.setAttribute("address_info",ba);

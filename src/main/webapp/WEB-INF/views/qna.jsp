@@ -6,18 +6,21 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" href="${root}/favicon.ico">
-<link href="${root}/css/chunk-a9fd5850.560ff2ed.css" rel="prefetch">
-<link href="${root}/css/chunk-d4936658.91d38551.css" rel="prefetch">
-<link href="${root}/js/chunk-2d0d5bc3.394f1cb1.js" rel="prefetch">
-<link href="${root}/js/chunk-2d209150.ef3eaa94.js" rel="prefetch">
-<link href="${root}/js/chunk-4de60b4c.7323f445.js" rel="prefetch">
-<link href="${root}/js/chunk-a9fd5850.74463a06.js" rel="prefetch">
-<link href="${root}/js/chunk-d4936658.ecbda978.js" rel="prefetch">
-<link href="${root}/css/app.c63e254f.css" rel="preload" as="style">
-<link href="${root}/js/app.fd99e2bb.js" rel="preload" as="script">
-<link href="${root}/js/chunk-vendors.b925e34b.js" rel="preload" as="script">
-<link href="${root}/css/app.c63e254f.css" rel="stylesheet">
+<link href="${root}/css/chunk-08c0cd79.98871dbb.css" rel="prefetch">
+<link href="${root}/css/chunk-72bafe7a.f12ebaa8.css" rel="prefetch">
+<link href="${root}/css/chunk-e9a6af3c.cc470d34.css" rel="prefetch">
+<link href="${root}/js/chunk-08c0cd79.6cb431fc.js" rel="prefetch">
+<link href="${root}/js/chunk-2d0d5bc3.1d51e9d4.js" rel="prefetch">
+<link href="${root}/js/chunk-2d209150.e3b463e8.js" rel="prefetch">
+<link href="${root}/js/chunk-72bafe7a.93dbf20e.js" rel="prefetch">
+<link href="${root}/js/chunk-e9a6af3c.48a5498b.js" rel="prefetch">
+<link href="${root}/css/app.6340c9d0.css" rel="preload" as="style">
+<link href="${root}/css/chunk-vendors.da5db498.css" rel="preload" as="style">
+<link href="${root}/js/app.6cda1189.js" rel="preload" as="script">
+<link href="${root}/js/chunk-vendors.ba03c677.js" rel="preload" as="script">
+<link href="${root}/css/chunk-vendors.da5db498.css" rel="stylesheet">
+<link href="${root}/css/app.6340c9d0.css" rel="stylesheet">
+
 
 </head>
 <body>
@@ -27,16 +30,17 @@
 			<span>Q&A</span>
             <h2>Q&A</h2>
 		</div>
-
+<div class="row mb-5">
+	<div class="col-md-10 flex-row" style="float: none; margin: 0 auto;">
 	<noscript>
 		<strong>We're sorry but happyvue doesn't work properly
 			without JavaScript enabled. Please enable it to continue.</strong>
 	</noscript>
 	<div id="app"></div>	
-	<script src="${root}/js/chunk-vendors.b925e34b.js"></script>
-	<script src="${root}/js/app.fd99e2bb.js"></script>
-
+	<script src="${root}/js/chunk-vendors.ba03c677.js"></script>
+	<script src="${root}/js/app.6cda1189.js"></script>
 </div>
+</div></div>
 </section>
 </body>
 

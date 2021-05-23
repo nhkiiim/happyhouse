@@ -1,0 +1,49 @@
+#bts {
+	text-align: center
+}
+
+.regist[data-v-0583f5ed] {
+	padding: 10px
+}
+
+.regist_form[data-v-0583f5ed] {
+	text-align: left;
+	border-radius: 5px;
+	background-color: #fafafa;
+	padding: 20px
+}
+
+textarea[data-v-0583f5ed] {
+	width: 90%;
+	padding: 10px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: #787878;
+	font-size: large
+}
+
+.comment[data-v-68b01994] {
+	text-align: left;
+	border-radius: 5px;
+	background-color: #fafafa;
+	padding: 10px 20px;
+	margin: 10px
+}
+
+.head[data-v-68b01994] {
+	font-weight: 700;
+	margin-bottom: 5px
+}
+
+.content[data-v-68b01994] {
+	padding: 5px
+}
+
+.cbtn[data-v-68b01994] {
+	text-align: right;
+	color: #6e6e6e;
+	margin: 5px 0
+}

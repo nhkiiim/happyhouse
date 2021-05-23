@@ -6,8 +6,8 @@
 	<div class="container">
 
 		<div class="section-title" data-aos="fade-down">
-			<span>공지사항</span>
-			<h2>공지사항</h2>
+			<span>Notice</span>
+			<h2>Notice</h2>
 			<div class="mt-4 mb-3">
 		  	<%-- <button type="button" onclick="location.href='${root}/noriceregist'" class="btn btn-success">등록</button> --%>
 		  	<button href="#" class="loginon" id="insertNotice" data-toggle="modal" data-target="#insertnoticeModal">공지 등록</button>

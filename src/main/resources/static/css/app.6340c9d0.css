@@ -1,0 +1,36 @@
+#app {
+	text-align: center
+}
+
+a {
+	text-decoration: none;
+	color: #787878
+}
+
+.regist {
+	padding: 10px
+}
+
+.regist_form {
+	text-align: left;
+	border-radius: 5px;
+	background-color: #fff;
+	padding: 20px
+}
+
+.view, input, textarea {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: #787878;
+	font-size: medium
+}
+
+label {
+	display: inline-block;
+	width: 80px
+}

@@ -49,8 +49,7 @@
             <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSAi87EFvSswrN4knxhU6flqYvs7ISJdw&callback=initMap"></script>
             <script>
 	            var locations =[];
-
-				locations = [
+				/* locations = [
 					 	 ['도봉구'	,	37.6658609	,	127.0317674	],
 						 ['은평구'	,	37.6176125	,	126.9227004	],
 						 ['동대문구'	,	37.5838012	,	127.0507003	],
@@ -76,7 +75,102 @@
 						 ['관악구'	,	37.4653993	,	126.9438071	],
 						 ['성동구'	,	37.5506753	,	127.0409622	],
 						 ['용산구'	,	37.5311008	,	126.9810742	]
-				 ];
+				 ]; */
+				 var locations =[];
+				 
+				 	locations.push(['    52,200', 37.6496953, 127.027271, "e편한세상", "images/house.jpg"])
+				 	locations.push(['    20,300', 37.6548448, 127.0349748, "경남", "images/house.jpg"])
+				 	locations.push(['    41,000', 37.6512992, 127.0272796, "극동", "images/house.jpg"])
+				 	locations.push(['    34,900', 37.6589994, 127.033425, "금호1", "images/house.jpg"])
+				 	locations.push(['    43,600', 37.6571287, 127.0292322, "금호2", "images/house.jpg"])
+				 	locations.push(['    14,000', 37.6545947, 127.0344738, "기용", "images/house.jpg"])
+				 	locations.push(['    70,000', 37.6553159, 127.0323146, "대우파크빌", "images/house.jpg"])
+				 	locations.push(['    58,900', 37.651554, 127.02912, "대우파크힐(쌍문동이안)", "images/house.jpg"])
+				 	locations.push(['    25,100', 37.6598202, 127.0356267, "대웅", "images/house.jpg"])
+				 	locations.push(['    29,800', 37.6613476, 127.0381877, "도봉 금강아미움 파크타운", "images/house.jpg"])
+				 	locations.push(['    26,300', 37.6513004, 127.0247059, "동익미라벨", "images/house.jpg"])
+				 	locations.push(['    25,000', 37.6553186, 127.0316617, "미라보", "images/house.jpg"])
+				 	locations.push(['    27,000', 37.6460275, 127.0262163, "백조", "images/house.jpg"])
+				 	locations.push(['    37,000', 37.6587508, 127.0347634, "벽산송화프라자", "images/house.jpg"])
+				 	locations.push(['    62,500', 37.6522545, 127.0304855, "북한산 코오롱 하늘채", "images/house.jpg"])
+				 	locations.push(['    42,800', 37.6537818, 127.0136444, "북한산월드메르디앙", "images/house.jpg"])
+				 	locations.push(['    50,000', 37.6472808, 127.0293876, "브라운스톤쌍문", "images/house.jpg"])
+				 	locations.push(['    19,000', 37.6532731, 127.0219104, "삼보", "images/house.jpg"])
+				 	locations.push(['    28,500', 37.6572028, 127.0351948, "삼익세라믹", "images/house.jpg"])
+				 	locations.push(['    24,500', 37.6605252, 127.0358885, "선우", "images/house.jpg"])
+				 	locations.push(['    41,000', 37.6583437, 127.0289579, "성원", "images/house.jpg"])
+				 	locations.push(['    26,800', 37.6522545, 127.0304855, "솔밭노블리안", "images/house.jpg"])
+				 	locations.push(['    28,000', 37.64687929999999, 127.0329396, "스마트빌", "images/house.jpg"])
+				 	locations.push(['    25,800', 37.6583968, 127.0400754, "시그마팰리스", "images/house.jpg"])
+				 	locations.push(['    22,000', 37.649738, 127.0310441, "신동아", "images/house.jpg"])
+				 	locations.push(['    22,000', 37.657567, 127.0393018, "신라샤르망", "images/house.jpg"])
+				 	locations.push(['    28,700', 37.6583229, 127.0358637, "신원2", "images/house.jpg"])
+				 	locations.push(['    23,400', 37.6573275, 127.0282084, "신원에벤에셀", "images/house.jpg"])
+				 	locations.push(['    27,500', 37.6505068, 127.0293206, "신일라이프", "images/house.jpg"])
+				 	locations.push(['    31,000', 37.6492235, 127.0279696, "쌍문금용", "images/house.jpg"])
+				 	locations.push(['    42,900', 37.6467678, 127.027929, "쌍문동삼성래미안", "images/house.jpg"])
+				 	locations.push(['    33,800', 37.6435716, 127.0311842, "쌍문리버뷰", "images/house.jpg"])
+				 	locations.push(['    28,000', 37.6604107, 127.0396392, "에덴", "images/house.jpg"])
+				 	locations.push(['    59,000', 37.65907139999999, 127.0352919, "엘지트윈빌Ⅰ·Ⅱ", "images/house.jpg"])
+				 	locations.push(['    29,800', 37.6484196, 127.0263108, "염광", "images/house.jpg"])
+				 	locations.push(['    25,200', 37.6507995, 127.0319255, "원산", "images/house.jpg"])
+				 	locations.push(['    27,000', 37.6577451, 127.03938, "젬스톤타운", "images/house.jpg"])
+				 	locations.push(['    40,000', 37.6595556, 127.0344458, "청구", "images/house.jpg"])
+				 	locations.push(['    22,300', 37.6503112, 127.0227595, "청화", "images/house.jpg"])
+				 	locations.push(['    44,000', 37.65584339999999, 127.0276577, "파라다이스빌", "images/house.jpg"])
+				 	locations.push(['    23,200', 37.6541198, 127.0355645, "풀내음아파트", "images/house.jpg"])
+				 	locations.push(['    29,500', 37.65616929999999, 127.0365149, "피스플하우스", "images/house.jpg"])
+				 	locations.push(['     9,000', 37.6495812, 127.0299424, "한솔캐스빌", "images/house.jpg"])
+				 	locations.push(['    35,900', 37.6457729, 127.030316, "한양1", "images/house.jpg"])
+				 	locations.push(['    16,400', 37.6570975, 127.0311388, "한양2", "images/house.jpg"])
+				 	locations.push(['    16,400', 37.6570975, 127.0311388, "한양2", "images/house.jpg"])
+				 	locations.push(['    30,400', 37.6559354, 127.0319325, "한양5", "images/house.jpg"])
+				 	locations.push(['    44,000', 37.6557483, 127.0292388, "한양6", "images/house.jpg"])
+				 	locations.push(['    39,800', 37.6560041, 127.0338322, "한양7", "images/house.jpg"])
+				 	locations.push(['    18,000', 37.6585281, 127.0312211, "현대1", "images/house.jpg"])
+				 	locations.push(['    35,000', 37.6591984, 127.0306616, "현대2", "images/house.jpg"])
+				 	locations.push(['    29,200', 37.6518064, 127.0216044, "현대3", "images/house.jpg"])
+				 	locations.push(['    40,100', 37.6665669, 127.039578, "거성학마을아파트", "images/house.jpg"])
+								 	locations.push(['    34,000', 37.6643234, 127.0268376, "극동아파트", "images/house.jpg"])
+								 	locations.push(['    35,750', 37.6645833, 127.0450668, "금광포란재아파트", "images/house.jpg"])
+								 	locations.push(['    69,500', 37.664974, 127.048155, "대상타운현대아파트", "images/house.jpg"])
+								 	locations.push(['    17,500', 37.6626224, 127.0281621, "대원그린아파트", "images/house.jpg"])
+								 	locations.push(['    50,000', 37.6636071, 127.0390268, "동부센트레빌아파트", "images/house.jpg"])
+								 	locations.push(['    41,500', 37.6644054, 127.0302278, "동양크레오아파트", "images/house.jpg"])
+								 	locations.push(['    12,000', 37.6674038, 127.0447699, "방학 지음재힐스", "images/house.jpg"])
+								 	locations.push(['    60,000', 37.66856200000001, 127.0454839, "방학E.S.A1아파트", "images/house.jpg"])
+								 	locations.push(['    52,000', 37.6663859, 127.0455878, "방학E.S.A2아파트", "images/house.jpg"])
+								 	locations.push(['    49,000', 37.6664804, 127.0448997, "방학E.S.A3아파트", "images/house.jpg"])
+								 	locations.push(['    74,500', 37.6668979, 127.0473902, "방학동삼성래미안1", "images/house.jpg"])
+								 	locations.push(['    65,000', 37.6650641, 127.0458053, "방학동삼성래미안2", "images/house.jpg"])
+								 	locations.push(['    36,000', 37.66029839999999, 127.0321807, "벽산아파트1", "images/house.jpg"])
+								 	locations.push(['    39,400', 37.6587155, 127.0254295, "벽산아파트2", "images/house.jpg"])
+								 	locations.push(['    24,000', 37.6638949, 127.037417, "부영팰리스", "images/house.jpg"])
+								 	locations.push(['    50,000', 37.6634767, 127.0450526, "브라운스톤방학아파트", "images/house.jpg"])
+								 	locations.push(['    26,500', 37.6611831, 127.0339317, "삼익세라믹아파트", "images/house.jpg"])
+								 	locations.push(['    39,500', 37.6615064, 127.0358939, "성원아파트", "images/house.jpg"])
+								 	locations.push(['    22,000', 37.6666657, 127.0337541, "성진파크뷰 아파트", "images/house.jpg"])
+								 	locations.push(['    24,500', 37.666979, 127.0360873, "송학휴스테이", "images/house.jpg"])
+								 	locations.push(['    27,500', 37.6609614, 127.0265811, "신동아아파트1", "images/house.jpg"])
+								 	locations.push(['    27,500', 37.6609614, 127.0265811, "신동아아파트1", "images/house.jpg"])
+								 	locations.push(['    27,500', 37.6609614, 127.0265811, "신동아아파트1", "images/house.jpg"])
+								 	locations.push(['    27,500', 37.6609614, 127.0265811, "신동아아파트1", "images/house.jpg"])
+								 	locations.push(['    27,500', 37.6609614, 127.0265811, "신동아아파트1", "images/house.jpg"])
+								 	locations.push(['    37,500', 37.6591068, 127.0234943, "신동아아파트2", "images/house.jpg"])
+								 	locations.push(['    39,500', 37.660255, 127.0232072, "신동아아파트3", "images/house.jpg"])
+								 	locations.push(['    27,300', 37.6626197, 127.0299133, "신동아아파트4", "images/house.jpg"])
+								 	locations.push(['    38,500', 37.6633879, 127.0286599, "신동아아파트5", "images/house.jpg"])
+								 	locations.push(['    31,800', 37.66216989999999, 127.0287936, "신동아타워아파트", "images/house.jpg"])
+								 	locations.push(['    21,000', 37.664066, 127.0359776, "신주아파트(A동)", "images/house.jpg"])
+								 	locations.push(['    16,800', 37.6641579, 127.0360852, "신주아파트B", "images/house.jpg"])
+								 	locations.push(['    31,300', 37.6578986, 127.023934, "우성아파트1", "images/house.jpg"])
+								 	locations.push(['    36,700', 37.6568265, 127.0219908, "우성아파트2", "images/house.jpg"])
+								 	locations.push(['    42,500', 37.6637245, 127.0456082, "우암쎈스뷰아파트", "images/house.jpg"])
+								 	locations.push(['    36,500', 37.6575265, 127.0260117, "청구아파트", "images/house.jpg"])
+								 	locations.push(['    36,500', 37.6575265, 127.0260117, "청구아파트", "images/house.jpg"])
+								 	locations.push(['    10,300', 37.6674352, 127.043873, "퍼스티안", "images/house.jpg"])
+								 	locations.push(['    29,000', 37.66122259999999, 127.0316077, "한화/성원아파트", "images/house.jpg"])
+								 	locations.push(['    40,500', 37.6613225, 127.0329087, "효성하이타운아파트", "images/house.jpg"])
 				
 			var map = null;
 			var latitude;
@@ -160,6 +254,7 @@
 			
 			var infowindow = new google.maps.InfoWindow();
 			
+			//핑찍기
 			var marker, i;
 			for (i = 0; i < locations.length; i++) {  
 			marker = new google.maps.Marker({
@@ -168,8 +263,9 @@
 			label : locations[i][0],
 			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
 			map: map
-			});
+			}); 
 			
+			//핑 클릭
 			google.maps.event.addListener(marker, 'click', (function(marker, i) {
 			return function() {
 			infowindow.setContent(locations[i][0]);
