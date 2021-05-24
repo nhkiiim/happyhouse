@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ssafy.happyhouse.model.repo.HouseInfoRepo">
-<!-- <select id="commConvi" resultType="Commercial">
-	select count(*) from commercial where dong=#{dong} and code3 like concat('%','편의점','%');
-</select>
+<mapper
+	namespace="com.ssafy.happyhouse.model.repo.CommercialRepo">
+	<select id="commCodeA" resultType="int">
+		select count(*) from commercial 
+		<where>
+			<if test="dong != null">AND dong = #{dong} </if>
+			<if test="tmp != null">AND code2 like concat('%',#{tmp},'%') </if>
+		</where>
+	</select>
+	<select id="commCodeB" resultType="int">
+	select count(*) from commercial 
+		<where>
+			<if test="dong != null">AND dong = #{dong} </if>
+			<if test="tmp != null">AND code3 like concat('%',#{tmp},'%') </if>
+		</where>
+	</select>
 
-<select id="commEdu" resultType="Commercial">
-	select count(*) from commercial where dong=#{dong} and code3 like concat('%','학원','%');
-</select>
-
-<select id="commFast" resultType="Commercial">
-	select count(*) from commercial where dong=#{dong} and code3 like concat('%','편의점','%');
-</select> -->
 </mapper>

@@ -34,7 +34,7 @@
             </form>
        		-->
        		
-	      	<p class="mt-2 mb-2">관심지역&nbsp; :&nbsp; ${interest_info.city}&nbsp; ${interest_info.gugun}&nbsp; ${interest_info.dong}</p>
+	      	<h6 class="mt-2 mb-2">관심지역&nbsp; :&nbsp; ${interest_info.city}&nbsp; ${interest_info.gugun}&nbsp; ${interest_info.dong}</h6>
           </div>
            
     	  

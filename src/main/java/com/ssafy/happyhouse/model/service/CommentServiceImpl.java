@@ -8,9 +8,6 @@ import org.springframework.stereotype.Service;
 import com.ssafy.happyhouse.dto.CommentDto;
 import com.ssafy.happyhouse.model.repo.CommentMapper;
 
-
-
-
 @Service
 public class CommentServiceImpl implements CommentService {
 	@Autowired

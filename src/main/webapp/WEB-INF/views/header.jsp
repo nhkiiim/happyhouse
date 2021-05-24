@@ -51,6 +51,7 @@
 			</c:if>
 			<c:if test="${!empty userinfo and !empty interest_info}">
 			<li><a href="#search">관심지역</a></li>
+			<li><a href="#commercial">상권정보</a></li>
 			</c:if>
 			<c:if test="${!empty userinfo}">
 			<li><a href="#notice">공지사항</a></li>

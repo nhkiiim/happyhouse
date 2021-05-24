@@ -1,11 +1,11 @@
-package com.ssafy.happyhouse.model.repo;
+package com.ssafy.happyhouse.model.service;
 
 import java.sql.SQLException;
 import java.util.List;
 
 import com.ssafy.happyhouse.dto.Commercial;
 
-public interface CommercialRepo {
+public interface CommercialService {
 	int commCodeA(String dong,String tmp) throws SQLException;
 	int commCodeB(String dong,String tmp) throws SQLException;
 }

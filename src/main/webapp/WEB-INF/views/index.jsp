@@ -44,6 +44,8 @@
 			</c:if>
 
 			<c:if test="${!empty userinfo}">
+			
+			<%@ include file="commercial.jsp"%>
 			<!-- ======= 공지사항 Section ======= -->
 			<%@ include file="notice.jsp"%>
 			
