@@ -18,7 +18,7 @@
 	</insert>
 	
 	<update id="modify">
-		update qna set title=#{title}, author=#{author}, content=#{content}, time=#{time} 
+		update qna set title=#{title}, author=#{author}, content=#{content}, time=now() 
 		where isbn=#{isbn}
 	</update>
 
