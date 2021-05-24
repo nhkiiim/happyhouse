@@ -31,29 +31,32 @@
 		<%@ include file="header.jsp"%>
 
 		<main id="main">
+		
 			<!-- ======= 주택검색 Section ======= -->
 			<%@include file="list.jsp"%>
+			
+			<!-- ====== 관심지역 Section ======= -->
 			<c:if test="${!empty interest_info}">
-				<!-- ====== 관심지역 Section ======= -->
 				<%@include file="map.jsp"%>
 			</c:if>
 
+			<!-- ====== 관심지역 등록 Section ======= -->
 			<c:if test="${empty interest_info and !empty userinfo}">
-				<!-- ====== 관심지역 등록 Section ======= -->
 				<%@ include file="interest.jsp"%>
 			</c:if>
 
 			<c:if test="${!empty userinfo}">
-			
-			<%@ include file="commercial.jsp"%>
-			<!-- ======= 공지사항 Section ======= -->
-			<%@ include file="notice.jsp"%>
-			
-			<!-- ======= QnA Section ======= -->
-			<%@ include file="qna.jsp"%>
+				<!-- ======= 상권정보 Section ======= -->
+				<%@ include file="commercial.jsp"%>
+				<!-- ======= 학교 Section ======= -->
+				<%@ include file="school.jsp"%>
+				<!-- ======= 공지사항 Section ======= -->
+				<%@ include file="notice.jsp"%>
+				<!-- ======= QnA Section ======= -->
+				<%@ include file="qna.jsp"%>
 			</c:if>
-			
-			
+
+
 			<%@ include file="introduce.jsp"%>
 			<%@ include file="team.jsp"%>
 
