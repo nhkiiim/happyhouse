@@ -16,7 +16,7 @@ public class HouseInfoServiceImpl implements HouseInfoService{
 	HouseInfoRepo hirepo;
 	
 	@Override
-	public List<HouseInfo> searchInfo() throws SQLException{
-		return hirepo.searchInfo();
+	public HouseInfo searchInfo(String aptname) throws SQLException{
+		return hirepo.searchInfo(aptname);
 	}
 }

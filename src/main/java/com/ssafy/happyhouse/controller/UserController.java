@@ -44,8 +44,6 @@ public class UserController {
 			
 			Interest interest=iService.select(user.getId());
 			if(interest!=null) {
-				List<HouseInfo> hi = hiService.searchInfo();
-				session.setAttribute("house_info", hi);
 				session.setAttribute("interest_info",interest);
 				BaseAddress ba= bService.select(interest.getDong());
 				session.setAttribute("address_info",ba);

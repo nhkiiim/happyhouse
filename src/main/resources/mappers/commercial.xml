@@ -16,5 +16,12 @@
 			<if test="tmp != null">AND code3 like concat('%',#{tmp},'%') </if>
 		</where>
 	</select>
-
+	<select id="land" resultType="Commercial">
+	select * from commercial 
+		<where>
+			<if test="dong != null">AND dong = #{dong} </if>
+			AND code2 like concat('%','부동산','%')
+		</where>
+		limit 3
+	</select>
 </mapper>

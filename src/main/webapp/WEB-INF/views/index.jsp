@@ -14,6 +14,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script
 	src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+	
 <body>
 	<div class="wrap">
 		<!-- ======= Hero Section ======= -->
@@ -34,6 +35,8 @@
 		
 			<!-- ======= 주택검색 Section ======= -->
 			<%@include file="list.jsp"%>
+			<!-- ======= 매물평균 Section ======= -->
+				<%@ include file="avg.jsp"%>
 			
 			<!-- ====== 관심지역 Section ======= -->
 			<c:if test="${!empty interest_info}">
@@ -48,6 +51,8 @@
 			<c:if test="${!empty userinfo}">
 				<!-- ======= 상권정보 Section ======= -->
 				<%@ include file="commercial.jsp"%>
+				<!-- ======= 부동산 Section ======= -->
+				<%@include file="land.jsp"%>
 				<!-- ======= 학교 Section ======= -->
 				<%@ include file="school.jsp"%>
 				<!-- ======= 공지사항 Section ======= -->
@@ -96,6 +101,10 @@
 
 	<!-- Modal Notice -->
 	<%@ include file="/WEB-INF/views/insertnotice.jsp"%>
+	
+	<!-- Modal LandMap -->
+	<%@ include file="/WEB-INF/views/land_map.jsp"%>
+	
 
 	<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 

@@ -30,4 +30,9 @@ public class CommercialServiceImpl implements CommercialService {
 		return res;
 	}
 
+	@Override
+	public List<Commercial> land(String dong) throws SQLException {
+		return crepo.land(dong);
+	}
+
 }

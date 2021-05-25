@@ -18,6 +18,36 @@
 	<select id="selectDong" resultType="HouseDeal">
 		select * from housedeal where dong like concat('%',#{searchText},'%') limit 10
 	</select>
+	<select id="avg60" resultType="int">
+		select round(avg(dealamount)) from housedeal 
+		<where>
+			<if test="dong != null">AND dong = #{dong} </if>
+			AND area &lt; 60
+		</where>
+	</select>
+	<select id="avg80" resultType="int">
+		select round(avg(dealamount)) from housedeal 
+		<where>
+			<if test="dong != null">AND dong = #{dong} </if>
+			AND area &lt; 80
+			AND area &gt; 60
+		</where>
+	</select>
+	<select id="avg100" resultType="int">
+		select round(avg(dealamount)) from housedeal 
+		<where>
+			<if test="dong != null">AND dong = #{dong} </if>
+			AND area &lt; 120
+			AND area &gt; 80
+		</where>
+	</select>
+	<select id="avg140" resultType="int">
+		select round(avg(dealamount)) from housedeal 
+		<where>
+			<if test="dong != null">AND dong = #{dong} </if>
+			AND area &gt; 120
+		</where>
+	</select>
 </mapper>
 
 

@@ -3,6 +3,6 @@
 <mapper namespace="com.ssafy.happyhouse.model.repo.HouseInfoRepo">
 
 <select id="searchInfo" resultType="HouseInfo">
-	select dong, lat, lng from houseinfo where dong=#{dong} limit 10;
+	select * from houseinfo where aptname=#{aptname}
 </select>
 </mapper>

@@ -39,5 +39,29 @@ public class HouseDealServiceImpl implements HouseDealService {
 	public List<HouseDeal> selectDong(String dong) throws SQLException {
 		return hrepo.selectDong(dong);
 	}
+
+	@Override
+	public int avg60(String dong) throws SQLException {
+		int r= hrepo.avg60(dong);
+		return r;
+	}
+
+	@Override
+	public int avg80(String dong) throws SQLException {
+		int r= hrepo.avg80(dong);
+		return r;
+	}
+
+	@Override
+	public int avg100(String dong) throws SQLException {
+		int r= hrepo.avg100(dong);
+		return r;
+	}
+
+	@Override
+	public int avg140(String dong) throws SQLException {
+		int r= hrepo.avg140(dong);
+		return r;
+	}
 	
 }

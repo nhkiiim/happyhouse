@@ -11,4 +11,8 @@ public interface HouseDealService {
 	List<HouseDeal> selectPrice(int price) throws SQLException;
 	List<HouseDeal> selectAptName(String aptName) throws SQLException;
 	List<HouseDeal> selectDong(String dong) throws SQLException;
+	int avg60(String dong) throws SQLException;
+	int avg80(String dong) throws SQLException;
+	int avg100(String dong) throws SQLException;
+	int avg140(String dong) throws SQLException;
 }

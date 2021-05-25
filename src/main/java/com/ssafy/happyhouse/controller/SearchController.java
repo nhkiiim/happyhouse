@@ -84,4 +84,20 @@ public class SearchController {
 		m.addAttribute("housedeal", h);	
 		return "index";
 	}
+	
+	@GetMapping("/avg")
+	public String avg(String dong, Model m) throws SQLException {
+		
+		int a=hService.avg60(dong);
+		int b=hService.avg80(dong);
+		int c=hService.avg100(dong);
+		int d=hService.avg140(dong);
+		m.addAttribute("avg60", a*1000);	
+		m.addAttribute("avg80", b*1000);	
+		m.addAttribute("avg100", c*1000);	
+		m.addAttribute("avg140", d*1000);	
+		m.addAttribute("avgDong", dong);	
+		return "index";
+	}
+	
 }

@@ -8,4 +8,5 @@ import com.ssafy.happyhouse.dto.Commercial;
 public interface CommercialRepo {
 	int commCodeA(String dong,String tmp) throws SQLException;
 	int commCodeB(String dong,String tmp) throws SQLException;
+	List<Commercial> land(String dong) throws SQLException;
 }
