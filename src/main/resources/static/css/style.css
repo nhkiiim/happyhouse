@@ -168,6 +168,13 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: none;
   color: #444444;
 }
+.nav-menu .dropdown-menu ul li a {
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: none;
+  color: #444444;
+}
 
 .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
   color: #4eb478;
