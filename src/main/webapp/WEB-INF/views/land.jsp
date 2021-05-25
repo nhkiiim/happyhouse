@@ -6,7 +6,7 @@
           <div class="section-title" data-aos="fade-down">
             <span>real estate</span>
             <h2>real estate</h2>
-            <p>동별 부동산을 추천해드립니다!</p>
+            <p>동별로 부동산을 추천해드립니다!</p>
           </div>
           
           <div class="mb-3">

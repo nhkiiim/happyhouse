@@ -77,7 +77,7 @@
 			<li><a href="#" class="loginon" id="joinUser" data-toggle="modal" data-target="#joinModal">회원가입</a></li>
 			</c:if>
 			<c:if test="${!empty userinfo}">
-			<li><a href="#" class="loginoff" data-toggle="modal"data-target="#userInfoModal" >${userinfo.name}님 정보조회</a></li>
+			<li><a href="#" class="loginoff" data-toggle="modal"data-target="#userInfoModal" >마이페이지</a></li>
 			<li><a href="${root}/logout" class="loginoff" id="btn-logout">로그아웃</a></li>
 			<li><a href="#" class="loginoff" data-toggle="modal"data-target="#changeModal" >회원수정</a></li>
 			<c:if test="${userinfo.id eq 'admin'}">
