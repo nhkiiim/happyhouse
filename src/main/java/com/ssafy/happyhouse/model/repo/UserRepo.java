@@ -10,4 +10,6 @@ public interface UserRepo {
 	void insert(User user) throws SQLException;
 	void delete(String id) throws SQLException;
 	void update(User user) throws SQLException;
+	void sendMail(String pwd, String address, String id)throws SQLException;
+	User findPwd(User user)throws SQLException;
 }

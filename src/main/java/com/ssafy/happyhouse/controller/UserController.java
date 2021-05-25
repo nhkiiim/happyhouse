@@ -110,12 +110,29 @@ public class UserController {
 		return "index";
 	}
 	
-	@GetMapping("/find")
-	public String find(String uid, Model m) throws SQLException {
-		User user=uService.select(uid);
-		if(user==null) m.addAttribute("result","존재하지 않는 회원입니다.");
-		else m.addAttribute("result","비밀번호 &nbsp;:&nbsp;"+user.getPass());
-		return "members/desc";
+//	@GetMapping("/find")
+//	public String find(String uid, Model m) throws SQLException {
+//		User user=uService.select(uid);
+//		if(user==null) m.addAttribute("result","존재하지 않는 회원입니다.");
+//		else m.addAttribute("result","비밀번호 &nbsp;:&nbsp;"+user.getPass());
+//		return "members/desc";
+//	}
+	
+	@PostMapping("/find")
+	public String findpwd(User user, Model m) throws SQLException {
+		User tuser = null;
+		tuser = uService.findPwd(user);
+		if(tuser==null) {
+			m.addAttribute("result", "아이디나 이메일이 일치하는 사용자가 없습니다.");
+			return "members/desc";
+		} else {
+			String pwd = user.getPass();
+			String address = user.getAddress();
+			String id = user.getId();
+			uService.sendMail(pwd, address, id);
+			m.addAttribute("result", "성공적으로 이메일을 보냈습니다.");
+			return "members/desc";
+		}
 	}
 
 }

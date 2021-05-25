@@ -2,49 +2,37 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ssafy.happyhouse.model.repo.SchoolRepo">
-	<select id="selectSchool" resultType="School">
-		select * from school where code=#{code}
-	</select>
-	<!-- <insert id="insert" >
-	insert into school values (#{code},#{name},#{establishment},#{dong},#{address1},#{address2},#{url},#{coed})
-	</insert>
-	<update id="modify">
-	update school set code=#{code}, name=#{name}, establishment=#{establishment},dong=#{dong},address1=#{address1},address2=#{address2},url=#{url},coed=#{coed} where code=#{code} 
-	</update>
-	<delete id="delete">
-	delete from school where code=#{code}
-	</delete> -->
+
 	<select id="searchSchool" resultType="School">
-	
-		select * from school 
-		 <where>
-		 	<if test= "#{schoolField}=='MIDDLE'"> and code like 2 </if>
-		 	and name like concat('%',#{schoolText},'%')
-			<!-- and name like concat('%',#{schoolText},'%') -->
-			<!-- <if test= "schoolField=='LIST'"> and name like concat('%',#{schoolText},'%') </if> -->
-			<!-- <if test= "#{schoolField}=='ELEMENTARY'"> and code like 1 </if>
-			<if test= "#{schoolField}=='MIDDLE'"> and code like 2 </if>
-			<if test= "#{schoolField}=='HIGH'"> and code like 3 </if>
-			<if test= "#{schoolField}=='SPECIAL'"> and code like 4 </if>
-			<if test= "#{schoolField}=='OTHER'"> and code like 5 </if>
-			AND dong like concat('%',#{schoolText},'%') -->
-		</where>
-		
-		limit 10
-		<!-- select * from school limit 10 -->
+		select * from school where dong=#{dong} limit 10
 	</select>
-	<!-- <select id="selectDong" resultType="School">
-		select * from school 
+	<select id="countElem" resultType="int">
+		select count(*) from school 
 		<where>
-			<if test= "#{schoolField}=='LIST'"> dong like concat('%',#{schoolText},'%') </if>
-			<if test= "#{schoolField}=='ELEMENTARY'"> and code like 1 </if>
-			<if test= "#{schoolField}=='MIDDLE'"> and code like 2 </if>
-			<if test= "#{schoolField}=='HIGH'"> and code like 3 </if>
-			<if test= "#{schoolField}=='SPECIAL'"> and code like 4 </if>
-			<if test= "#{schoolField}=='OTHER'"> and code like 5 </if>
-			AND dong like concat('%',#{schoolText},'%')
-		</where> 
-		
-		limit 10
-	</select> -->
+			<if test="dong != null">AND dong = #{dong} </if>
+			<if test="tmp != null">AND code=1</if>
+		</where>
+	</select>
+	<select id="countMid" resultType="int">
+		select count(*) from school 
+		<where>
+			<if test="dong != null">AND dong = #{dong} </if>
+			<if test="tmp != null">AND code=2</if>
+		</where>
+	</select>
+	<select id="countHigh" resultType="int">
+		select count(*) from school 
+		<where>
+			<if test="dong != null">AND dong = #{dong} </if>
+			<if test="tmp != null">AND code=3</if>
+		</where>
+	</select>
+	<select id="countSpe" resultType="int">
+		select count(*) from school 
+		<where>
+			<if test="dong != null">AND dong = #{dong} </if>
+			<if test="tmp != null">AND code=4</if>
+		</where>
+	</select>
+	
 </mapper>

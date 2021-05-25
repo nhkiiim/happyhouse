@@ -1,6 +1,7 @@
 package com.ssafy.happyhouse.controller;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -20,20 +21,23 @@ public class SchoolController {
 	SchoolService sService;
 
 	@GetMapping("/school")
-	public String list(String schoolField, String schoolText, Model m, HttpSession session) throws SQLException {
+	public String list(String dong, Model m, HttpSession session) throws SQLException {
 		List<School> schools = null;
-		switch (schoolField) {
-		case "LIST":
-			schools = sService.searchSchool(schoolText);
-			schoolText = "";
-			break;
-		default:
-			schools = sService.selectDong(schoolText);
+		List<Integer> datas = new ArrayList<>();
+		try {
+			schools = sService.searchSchool(dong);
+			datas.add(sService.countElem(dong));
+			datas.add(sService.countMid(dong));
+			datas.add(sService.countHigh(dong));
+			datas.add(sService.countSpe(dong));
+
+			m.addAttribute("schools", schools);
+			m.addAttribute("datas", datas);
+			m.addAttribute("schooldong", dong);
+		}catch(Exception e) {
+			m.addAttribute("msg","검색 실패");
+			e.printStackTrace();
 		}
-		m.addAttribute("schools", schools);
-		m.addAttribute("schoolField", schoolField);
-		m.addAttribute("schoolText", schoolText);
-		// session.setAttribute("schools", schools);
 		return "index";
 	}
 	
@@ -41,12 +45,5 @@ public class SchoolController {
 	   public String exRedirect(String schoolurl) {
 	       return "redirect:"+schoolurl;
 	   }
-
-	/*
-	 * @GetMapping("/school" ) public String list(HttpSession session) throws
-	 * SQLException { List<School> schools= null; schools =
-	 * sService.searchSchool(schoolText); session.setAttribute("schools", schools);
-	 * return "index"; }
-	 */
 
 }
