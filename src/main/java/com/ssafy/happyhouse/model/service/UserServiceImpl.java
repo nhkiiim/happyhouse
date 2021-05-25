@@ -46,7 +46,7 @@ public class UserServiceImpl implements UserService {
 		for (int i = 0; i < 12; i++) {
 			pass += (char) ((Math.random() * 26) + 97);
 		}
-		urepo.resetPwd(id, pass);
+		urepo.resetPwd(id, name, phone, pass);
 		return urepo.findPwd(id, name, phone);
 	}
 

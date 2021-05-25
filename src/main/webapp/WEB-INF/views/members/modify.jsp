@@ -31,8 +31,8 @@
 						</div>
 						<div class="row mb-3">
 							<label class="col-md-3" for="jAddress">이메일
-								*</label> <input class="col-md-9 form-control" id="jAddress" name="address" type="text"
-								placeholder="e-mail" required>
+								*</label> <input class="col-md-9 form-control" id="jAddress" name="address" type="email"
+								placeholder="name@example.com" aria-describedby="emailHelp" required>
 						</div>
 						<div class="row mb-3">
 							<label class="col-md-3" for="jCellphone">전화번호
