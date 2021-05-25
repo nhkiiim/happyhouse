@@ -25,7 +25,7 @@
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content rounded-lg">
 			<form action="send" method="post" id="sendform" class="was-validated">
-			<button type="submit" form="sendform" class="btn btn-success col-3">보내기</button>
+				<button type="submit" form="sendform" class="btn btn-success col-3">보내기</button>
 			
 			</form>
 			<!-- Modal Header -->
