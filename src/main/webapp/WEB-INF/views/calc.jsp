@@ -76,7 +76,7 @@
               <c:if test="${empty avgDong}">	
               <span data-toggle="counter-up">?</span>
               </c:if>
-              <p>면적 &lt; 60</p>
+              <p>area &lt; 60</p>
             </div>
           </div>
 
@@ -89,7 +89,7 @@
               <c:if test="${empty avgDong}">	
               <span data-toggle="counter-up">?</span>
               </c:if>
-              <p>60 &lt; 면적 &lt; 80</p>
+              <p>60 &lt; area &lt; 80</p>
             </div>
           </div>
 
@@ -102,7 +102,7 @@
               <c:if test="${empty avgDong}">	
               <span data-toggle="counter-up">?</span>
               </c:if>
-              <p>80 &lt; 면적 &lt; 120</p>
+              <p>80 &lt; area &lt; 120</p>
             </div>
           </div>
 
@@ -115,7 +115,7 @@
               <c:if test="${empty avgDong}">	
               <span data-toggle="counter-up">?</span>
               </c:if>
-              <p>면적 &gt; 120</p>
+              <p>area &gt; 120</p>
             </div>
           </div>
 
