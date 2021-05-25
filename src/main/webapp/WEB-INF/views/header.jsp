@@ -63,21 +63,27 @@
           </ul>
          </nav>
 
-        <div class="logo nav-menu ml-auto d-none d-lg-block">
-        
+        <div class="logo nav-menu ml-auto d-none d-lg-block dropdown">
         <ul>
-          
-			<c:if test="${empty userinfo}">
+	        <li>
+	        <a class="dropdown-toggle" data-toggle="dropdown" href="#"> 
+	        <i class="icofont-ui-user" style="color: white"></i>&nbsp;&nbsp;
+	        <span class="caret"></span></a>
+	        <ul class="dropdown-menu" style="background: black;">
+	          <c:if test="${empty userinfo}">
 			<li><a href="#" class="loginon" id="loginUser" data-toggle="modal" data-target="#loginModal">로그인</a></li>
 			<li><a href="#" class="loginon" id="findUser" data-toggle="modal" data-target="#findModal">비밀번호 찾기</a></li>
 			<li><a href="#" class="loginon" id="joinUser" data-toggle="modal" data-target="#joinModal">회원가입</a></li>
 			</c:if>
 			<c:if test="${!empty userinfo}">
-			<li><a href="#" class="loginoff" data-toggle="modal"data-target="#userInfoModal" >${userinfo.name} 님 정보조회</a></li>
+			<li><a href="#" class="loginoff" data-toggle="modal"data-target="#userInfoModal" >${userinfo.name}님 정보조회</a></li>
 			<li><a href="${root}/logout" class="loginoff" id="btn-logout">로그아웃</a></li>
 			<li><a href="#" class="loginoff" data-toggle="modal"data-target="#changeModal" >회원수정</a></li>
 			<li><a href="#" class="loginoff"  data-toggle="modal"data-target="#out">탈퇴</a></li>
 			</c:if>
+	        </ul>
+	      </li>
+       
           </ul>
         </div>
       </div>
