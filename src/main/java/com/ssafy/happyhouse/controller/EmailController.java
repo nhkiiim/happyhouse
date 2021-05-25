@@ -25,6 +25,12 @@ public class EmailController {
 
 	@PostMapping("/subscribe")
 	public String sendEmail(Model m, String email) throws SQLException {
+		
+		Subscribe subscribe = eService.select(email);
+		if(subscribe==null) {
+			
+		}
+		
 		m.addAttribute("msg", email + "님 구독 성공!!!");
 		eService.sendEmail(email, "HappyHouse 구독해 주셔서 감사합니다.",
 				"안녕하세요. " + email + " 님  \n 구독해주셔서 감사합니다. \n\n http://localhost:8888/happyhouse/");
