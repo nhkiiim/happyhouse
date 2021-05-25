@@ -11,7 +11,7 @@
               <p class="mb-5 mt-2">최신 정보 구독을 위해 이메일을 입력하세요! </p>
               
               <form action="subscribe" method="post" class="mb-5 mt-5">
-                <input type="email" name="email"><input type="submit" value="Subscribe">
+                <input type="email" name="email" aria-describedby="emailHelp"><input type="submit" value="Subscribe">
               </form>
               
             </div>

@@ -18,6 +18,6 @@
 		select id, name, pass, address, phone from user where id = #{id} and name=#{name} and phone=#{phone}
 	</select>
 	<update id="resetPwd">
-		update user set pass = #{pass} where id = #{id}
+		update user set pass = #{pass} where id = #{id} and name=#{name} and phone=#{phone}
 	</update>
 </mapper>

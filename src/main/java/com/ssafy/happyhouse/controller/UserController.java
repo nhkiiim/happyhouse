@@ -1,8 +1,6 @@
 package com.ssafy.happyhouse.controller;
 
 import java.sql.SQLException;
-import java.sql.SQLIntegrityConstraintViolationException;
-import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
@@ -13,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.ssafy.happyhouse.dto.BaseAddress;
-import com.ssafy.happyhouse.dto.HouseInfo;
 import com.ssafy.happyhouse.dto.Interest;
 import com.ssafy.happyhouse.dto.User;
 import com.ssafy.happyhouse.model.service.BaseAddressService;
@@ -66,6 +63,7 @@ public class UserController {
 		try {
 			User uid=uService.select(user.getId());
 			if(uid==null) {
+				
 				uService.insert(user);
 				m.addAttribute("msg","회원 등록 성공 "+user.getName()+" 님 반갑습니다.");
 			}
@@ -108,8 +106,7 @@ public class UserController {
 		
 		return "index";
 	}
-	
-	
+
 	
 
 }
