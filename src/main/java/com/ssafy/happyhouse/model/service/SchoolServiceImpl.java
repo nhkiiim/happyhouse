@@ -17,32 +17,28 @@ public class SchoolServiceImpl implements SchoolService {
 	SchoolRepo srepo;
 
 	@Override
-	public School selectSchool(int code) throws SQLException {
-		return srepo.selectSchool(code);
+	public List<School> searchSchool(String dong) throws SQLException {
+		return srepo.searchSchool(dong);
 	}
 
 	@Override
-	public void insert(School school) throws SQLException {
-		srepo.insert(school);
+	public int countElem(String dong) throws SQLException {
+		return srepo.countElem(dong);
 	}
 
 	@Override
-	public void modify(School school) throws SQLException {
-		srepo.modify(school);
+	public int countMid(String dong) throws SQLException {
+		return srepo.countMid(dong);
 	}
 
 	@Override
-	public void delete(School school) throws SQLException {
-		srepo.delete(school);
+	public int countHigh(String dong) throws SQLException {
+		return srepo.countHigh(dong);
 	}
 
 	@Override
-	public List<School> searchSchool(String schoolText) throws SQLException {
-		return srepo.searchSchool(schoolText);
+	public int countSpe(String dong) throws SQLException {
+		return srepo.countSpe(dong);
 	}
-	@Override
-	public List<School> selectDong(String dong) throws SQLException {
-		return srepo.selectDong(dong);
-	}
-
+	
 }
