@@ -6,5 +6,5 @@ import java.util.List;
 import com.ssafy.happyhouse.dto.HouseInfo;
 
 public interface HouseInfoService {
-	HouseInfo searchInfo(String aptname) throws SQLException;
+	HouseInfo lnglatRoad(int no) throws SQLException;
 }

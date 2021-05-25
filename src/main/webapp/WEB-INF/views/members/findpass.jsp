@@ -15,6 +15,7 @@ $(function(){
 			error : function(xhs,status,msg){
 				alert("error: "+msg);
 			}
+			
 		});
 	});
 });

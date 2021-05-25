@@ -30,7 +30,7 @@
 						<input class="form-control mr-2" type="text" name="searchText"
 							value="${searchText}">
 					</c:if>
-					<input class="btn btn-dark btm-sm col-2" type="submit" value="Search">
+					<input class="btn btn-success btm-sm col-2" type="submit" value="Search">
 				</form>
 			</div>
 		</div>

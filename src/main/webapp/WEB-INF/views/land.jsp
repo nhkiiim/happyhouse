@@ -1,5 +1,8 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!-- Modal LandMap -->
+		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bf61f9b0f02f84fdef6bffe53c80eb3e"></script>
+	
       <section id="land" class="portfolio section-bg">
         <div class="container">
 

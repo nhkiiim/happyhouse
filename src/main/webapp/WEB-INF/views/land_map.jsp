@@ -16,19 +16,19 @@
 			<!-- Modal body -->
 			<div class="modal-body">
 				<div class="container">
-				<div id="map" style="width: 100%; height: 300px;"></div>
+				<div id="kakaomap" style="width: 100%; height: 300px;"></div>
 	
 					<script>
 						
 						var lng=${bal.lng};
 						var lat=${bal.lat};
 						
-						var mapContainer = document.getElementById('map'), mapOption = {
+						var mapContainer = document.getElementById('kakaomap'), mapOption = {
 							center : new kakao.maps.LatLng(${bal.lat}+0.02,${bal.lng}-0.04),
 							level : 7
 						};
 
-						var map = new kakao.maps.Map(mapContainer, mapOption);
+						var kakaomap = new kakao.maps.Map(mapContainer, mapOption);
 
 						var markerPosition = new kakao.maps.LatLng(lat,
 								lng);
@@ -37,11 +37,11 @@
 							position : markerPosition
 						});
 						
-						marker.setMap(map);
+						marker.setMap(kakaomap);
 						
 						function relayout() {    
 						    
-						    map.relayout();
+							kakaomap.relayout();
 						}
 					</script>
 				</div>

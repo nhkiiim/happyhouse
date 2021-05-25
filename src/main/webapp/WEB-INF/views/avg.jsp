@@ -46,7 +46,7 @@
 		<div class="section-title" data-aos="fade-down">
 			<span>average price</span>
 			<h2>average price</h2>
-			  <h6 class="mt-2">동별 매물 크기에 따른 평균 가격 정보를 확인하세요~</h6>
+			  <h6 class="mt-2">동별 매물 크기에 따른 평균 가격 정보를 확인하세요 ( 단위 : 만원 )</h6>
 		</div>
 
 		<div class="mb-3">
@@ -65,7 +65,7 @@
 		</div>
 		</div>
 
-        <div class="row counts mb-5 mt-5">
+        <div class="row counts mt-5">
 
           <div class="col-lg-3 col-md-6">
             <div class="count-box">
@@ -76,7 +76,7 @@
               <c:if test="${empty avgDong}">	
               <span data-toggle="counter-up">?</span>
               </c:if>
-              <p>면적 &lt; 60</p>
+              <p>면적 &lt; 60㎡</p>
             </div>
           </div>
 
@@ -89,7 +89,7 @@
               <c:if test="${empty avgDong}">	
               <span data-toggle="counter-up">?</span>
               </c:if>
-              <p>60 &lt; 면적 &lt; 80</p>
+              <p>60㎡ &lt; 면적 &lt; 80㎡</p>
             </div>
           </div>
 
@@ -102,7 +102,7 @@
               <c:if test="${empty avgDong}">	
               <span data-toggle="counter-up">?</span>
               </c:if>
-              <p>80 &lt; 면적 &lt; 120</p>
+              <p>80㎡ &lt; 면적 &lt; 120㎡</p>
             </div>
           </div>
 
@@ -115,10 +115,9 @@
               <c:if test="${empty avgDong}">	
               <span data-toggle="counter-up">?</span>
               </c:if>
-              <p>면적 &gt; 120</p>
+              <p>면적 &gt; 120㎡</p>
             </div>
           </div>
-
         </div>
 
       </div>

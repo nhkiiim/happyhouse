@@ -1,125 +1,94 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <style>
-    .counts {
-  padding: 70px 0 60px;
-}
+    <script>
+$(function(){
+	$("#pmb").on("click",function(){
+		let p=$("#p").val();
+		$.ajax({
+			url : "${root}/pm",
+			type: "get",
+			data : {uid: p},
+			success : function(data){
+				$("#phtml").html(data+" 평");
+			},
+			error : function(xhs,status,msg){
+				alert("error: "+msg);
+			}
+		});
+	});
+});
 
-.counts .count-box {
-  padding: 30px 30px 25px 30px;
-  width: 100%;
-  position: relative;
-  text-align: center;
-  background: #F0F7F3;
-}
+$(function(){
+	$("#mpb").on("click",function(){
+		let m=$("#m").val();
+		$.ajax({
+			url : "${root}/mp",
+			type: "get",
+			data : {uid: m},
+			success : function(data){
+				$("#mhtml").html(data+" ㎡");
+			},
+			error : function(xhs,status,msg){
+				alert("error: "+msg);
+			}
+		});
+	});
+});
+</script>
 
-.counts .count-box i {
-  position: absolute;
-  top: -28px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 24px;
-  background: #79bd9a;
-  padding: 12px;
-  color: #fff;
-  border-radius: 50px;
-  border: 5px solid #fff;
-}
+      <section id="calc" class="contact">
+        <div class="container mb-5">
 
-.counts .count-box span {
-  font-size: 36px;
-  display: block;
-  font-weight: 600;
-  color: gray;
-}
+          <div class="section-title" data-aos="fade-down">
+            <span>calc</span>
+            <h2>calc</h2>
+          </div>
 
-.counts .count-box p {
-  padding: 0;
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-}
-</style>
-
-<section id="avg">
-	<div class="container">
-		<div class="section-title" data-aos="fade-down">
-			<span>average price</span>
-			<h2>average price</h2>
-			  <h6 class="mt-2">동별 매물 크기에 따른 평균 가격 정보를 확인하세요~</h6>
-		</div>
-
-		<div class="mb-3">
-			<div class="w-75" style="float: none; margin: 0 auto;">
-				<form id="avgform" action="avg" method="get">
-				<div class="justify-content-center d-flex flex-row mb-3">
-					<c:if test="${empty avgDong}">
-					<input class="form-control mr-2 w-50" type="text" name="dong" value="${interest_info.dong}">
-					</c:if>
-					<c:if test="${!empty avgDong}">
-					<input class="form-control mr-2 w-50" type="text" name="dong" value="${avgDong}">
-					</c:if>
-					<input class="btn btn-success btm-sm" type="submit" value="Search"><br>
-				</div>
-			</form>
-		</div>
-		</div>
-
-        <div class="row counts mb-5 mt-5">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <i class="icofont-user-alt-6"></i>
-            	<c:if test="${!empty avgDong}">	
-              <span data-toggle="counter-up">${avg60}</span>
-              </c:if>
-              <c:if test="${empty avgDong}">	
-              <span data-toggle="counter-up">?</span>
-              </c:if>
-              <p>area &lt; 60</p>
+          <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="100">
+              <div class="info-box">
+                <i class="bx bx-bookmark-alt-plus"></i>
+                <h3>평수 - 면적</h3>
+                <p>1평은 3.31㎡ 입니다</p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
+              <div class="info-box">
+                <i class="bx bx-bookmark-alt-plus"></i>
+                <h3>면적 - 평수</h3>
+                <p>1㎡는 0.3025평 입니다</p>
+              </div>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-            <div class="count-box">
-              <i class="icofont-home"></i>
-              <c:if test="${!empty avgDong}">
-              <span data-toggle="counter-up">${avg80}</span>
-              </c:if>
-              <c:if test="${empty avgDong}">	
-              <span data-toggle="counter-up">?</span>
-              </c:if>
-              <p>60 &lt; area &lt; 80</p>
+			<div class="php-email-form mt-4">
+            <div class="form-row mb-5">
+              <div class="col-md-5 form-group">
+                <input type="text" name="p" class="form-control" id="p" placeholder="평수" />
+                <div class="validate"></div>
+              </div>
+              <div class="text-center col-md-2"><button id="pmb" type="submit">change</button></div>
+              <div class="col-md-5 form-group text-center">
+              	<h5 id="phtml"></h5>
+                <div class="validate"></div>
+              </div>
             </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="icofont-building"></i>
-              <c:if test="${!empty avgDong}">
-              <span data-toggle="counter-up">${avg100}</span>
-              </c:if>
-              <c:if test="${empty avgDong}">	
-              <span data-toggle="counter-up">?</span>
-              </c:if>
-              <p>80 &lt; area &lt; 120</p>
+            
+            <div class="form-row">
+              <div class="col-md-5 form-group">
+         	<input type="text" class="form-control" name="m" id="m" placeholder="면적" />
+                       <div class="validate"></div>
+              </div>
+              <div class="text-center col-md-2"><button id="mpb" type="submit">change</button></div>
+              <div class="col-md-5 text-center form-group">
+                 	<h5 id="mhtml"></h5>
+                <div class="validate"></div>
+              </div>
             </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="icofont-users"></i>
-              <c:if test="${!empty avgDong}">
-              <span data-toggle="counter-up">${avg140}</span>
-              </c:if>
-              <c:if test="${empty avgDong}">	
-              <span data-toggle="counter-up">?</span>
-              </c:if>
-              <p>area &gt; 120</p>
-            </div>
-          </div>
+            
+			</div>
 
         </div>
-
-      </div>
-    </section>
+        <div class="mb-5">&nbsp;</div>
+      </section>
+      

@@ -12,9 +12,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.ssafy.happyhouse.dto.HouseDeal;
+import com.ssafy.happyhouse.dto.HouseInfo;
 import com.ssafy.happyhouse.dto.Notice;
 import com.ssafy.happyhouse.dto.QnaDto;
 import com.ssafy.happyhouse.model.service.HouseDealService;
+import com.ssafy.happyhouse.model.service.HouseInfoService;
 import com.ssafy.happyhouse.model.service.NoticeService;
 import com.ssafy.happyhouse.model.service.QnaService;
 
@@ -23,6 +25,10 @@ public class SearchController {
 
 	@Autowired
 	HouseDealService hService;
+	
+	@Autowired
+	HouseInfoService hiService;
+	
 	@Autowired
 	NoticeService nService;
 	@Autowired
@@ -71,8 +77,10 @@ public class SearchController {
 	
 	@GetMapping("/view")
 	public String view(int no, Model m) throws SQLException {
-		HouseDeal housedeal=hService.select(no); 
+		HouseDeal housedeal=hService.select(no);
+		HouseInfo road= hiService.lnglatRoad(no);
 		m.addAttribute("housedeal", housedeal);	
+		m.addAttribute("road", road);	
 		return "index";
 	}
 	
@@ -100,4 +108,19 @@ public class SearchController {
 		return "index";
 	}
 	
+	@GetMapping("/pm")
+	public String pm(String uid, Model m) throws SQLException {
+		int tmp=Integer.parseInt(uid);
+		m.addAttribute("result", tmp*3.31);
+		return "members/desc";
+		
+	}
+	
+	@GetMapping("/mp")
+	public String mp(String uid, Model m) throws SQLException {
+		int tmp=Integer.parseInt(uid);
+		m.addAttribute("result", tmp*0.3025);
+		return "members/desc";
+		
+	}
 }

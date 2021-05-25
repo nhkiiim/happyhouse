@@ -37,6 +37,7 @@
 			<%@include file="list.jsp"%>
 			<!-- ======= 매물평균 Section ======= -->
 				<%@ include file="avg.jsp"%>
+				<%@ include file="calc.jsp"%>
 			
 			<!-- ====== 관심지역 Section ======= -->
 			<c:if test="${!empty interest_info}">
