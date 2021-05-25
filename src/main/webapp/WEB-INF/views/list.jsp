@@ -11,7 +11,7 @@
 			<div class="col-md-6 flex-row" style="float: none; margin: 0 auto;">
 				<form id="listform" action="search" method="get"
 					class="d-flex flex-row">
-					<select class="form-control mr-2 col-2" name="searchField">
+					<select class="form-control mr-2 col-3" name="searchField">
 						<option value="LIST">전체</option>
 						<option value="APTNAME"
 							<c:if test="${searchField == 'APTNAME'}">selected</c:if>>아파트명
@@ -19,8 +19,7 @@
 						<option value="PRICE"
 							<c:if test="${searchField == 'PRICE'}">selected</c:if>>가격</option>
 						<option value="DONG"
-							<c:if test="${searchField == 'DONG'}">selected</c:if>
-							<c:if test="${!empty interest_info}">selected</c:if>>동</option>
+							<c:if test="${searchField == 'DONG'}">selected</c:if>>동</option>
 					</select>
 					<c:if test="${searchText==null}">
 						<input class="form-control mr-2" type="text" name="searchText"
@@ -37,8 +36,11 @@
 	</div>
 		
 		<c:if test="${empty housedeals and empty housedeal}">
-		<div class="container text-center mb-5 mt-3">
+		<div class="mt-5 text-center">
+			<img src="${root}/img/title.png">
 		</div>
+		
+		
 		</c:if>
 		<c:if test="${!empty housedeals and empty housedeal}">
 			<div class="container text-center mb-5">

@@ -42,9 +42,10 @@ $(function(){
           <div class="section-title" data-aos="fade-down">
             <span>calc</span>
             <h2>calc</h2>
+             <p>평수 - 면적 계산기를 통해 편리하게 변환해보세요~</p>
           </div>
 
-          <div class="row justify-content-center">
+          <div class="row justify-content-center mt-3">
             <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="100">
               <div class="info-box">
                 <i class="bx bx-bookmark-alt-plus"></i>
