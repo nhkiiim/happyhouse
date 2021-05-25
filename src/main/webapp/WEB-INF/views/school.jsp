@@ -55,7 +55,7 @@
 
 					function drawChart() {
 						var data = google.visualization.arrayToDataTable([
-								[ 'Opening Move', 'Percentage',{ role: 'style' }], [ '초등학교', a ,'#cff09e'],
+								[ 'Opening Move', '개수',{ role: 'style' }], [ '초등학교', a ,'#cff09e'],
 								[ '중학교', b ,'#a8dba8'], [ '고등학교',c, '#79bd9a' ],
 								[ '특수학교', d ,'#3b8686'] ]);
 

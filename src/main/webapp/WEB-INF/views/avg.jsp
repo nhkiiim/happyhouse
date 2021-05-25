@@ -46,7 +46,7 @@
 		<div class="section-title" data-aos="fade-down">
 			<span>average price</span>
 			<h2>average price</h2>
-			  <h6 class="mt-2">동별 매물 크기에 따른 평균 가격 정보를 확인하세요 ( 단위 : 만원 )</h6>
+			  <h6 class="mt-2">동별 매물 면적에 따른 평균 가격 정보를 확인하세요 ( 단위 : 만원 )</h6>
 		</div>
 
 		<div class="mb-3">

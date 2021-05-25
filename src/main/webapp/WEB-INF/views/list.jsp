@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<section id="detail">
+<section id="detail" class="portfolio section-bg">
 		<div class="container">
 		<div class="section-title" data-aos="fade-down">
 			<span>search</span>
@@ -24,7 +24,7 @@
 					</select>
 					<c:if test="${searchText==null}">
 						<input class="form-control mr-2" type="text" name="searchText"
-							value="${interest_info.dong}">
+							value="">
 					</c:if>
 					<c:if test="${searchText!=null}">
 						<input class="form-control mr-2" type="text" name="searchText"

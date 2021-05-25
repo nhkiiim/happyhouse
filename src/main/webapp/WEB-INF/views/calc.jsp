@@ -9,7 +9,7 @@ $(function(){
 			type: "get",
 			data : {uid: p},
 			success : function(data){
-				$("#phtml").html(data+" 평");
+				$("#phtml").html(data+" ㎡");
 			},
 			error : function(xhs,status,msg){
 				alert("error: "+msg);
@@ -26,7 +26,7 @@ $(function(){
 			type: "get",
 			data : {uid: m},
 			success : function(data){
-				$("#mhtml").html(data+" ㎡");
+				$("#mhtml").html(data+" 평");
 			},
 			error : function(xhs,status,msg){
 				alert("error: "+msg);

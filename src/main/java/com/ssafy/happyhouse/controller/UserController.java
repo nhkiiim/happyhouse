@@ -64,14 +64,14 @@ public class UserController {
 	@PostMapping("/join")
 	public String join(User user,Model m) {
 		try {
-			uService.insert(user);
-			m.addAttribute("msg","회원 등록 성공 "+user.getName()+" 님 반갑습니다.");
-
-//		}catch(SQLIntegrityConstraintViolationException e) {
-//			m.addAttribute("msg","회원 등록 실패 :"+user.getId()+" 는 이미 사용중입니다.");
-
+			User uid=uService.select(user.getId());
+			if(uid==null) {
+				uService.insert(user);
+				m.addAttribute("msg","회원 등록 성공 "+user.getName()+" 님 반갑습니다.");
+			}
+			else m.addAttribute("msg","회원 등록 실패 "+user.getId()+" 는 이미 사용중입니다.");
+			
 		}catch(Exception e) {
-			m.addAttribute("msg","회원 등록 실패 "+user.getId()+" 는 이미 사용중입니다.");
 			e.printStackTrace();
 		}
 		

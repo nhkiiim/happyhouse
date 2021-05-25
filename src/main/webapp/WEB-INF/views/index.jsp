@@ -22,7 +22,7 @@
 			<div class="hero-container" data-aos="fade-up">
 				<h1>Happy House</h1>
 				<h2>Welcome to Happy House</h2>
-				<a href="#detail" class="btn-get-started scrollto">Find your
+				<a href="#introduce" class="btn-get-started scrollto">Find your
 					happy house!</a>
 			</div>
 		</section>
@@ -33,6 +33,9 @@
 
 		<main id="main">
 		
+			<!-- ======= 소개 Section ======= -->
+			<%@ include file="introduce.jsp"%>
+			
 			<!-- ======= 주택검색 Section ======= -->
 			<%@include file="list.jsp"%>
 			<!-- ======= 매물평균 Section ======= -->
@@ -63,7 +66,6 @@
 			</c:if>
 
 
-			<%@ include file="introduce.jsp"%>
 			<%@ include file="team.jsp"%>
 
 
