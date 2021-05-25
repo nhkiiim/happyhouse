@@ -38,11 +38,11 @@ public class InterestController {
 			if(session!=null) {
 				session.removeAttribute("address_info");
 				session.removeAttribute("interest_info");
-				m.addAttribute("msg","삭제 완료");
+				m.addAttribute("msg","관심지역 삭제 완료");
 			}
 		}
 		catch(Exception e) {
-			m.addAttribute("msg","삭제 실패");
+			m.addAttribute("msg","관심지역 삭제 실패");
 		}
 		return "index";
 	}

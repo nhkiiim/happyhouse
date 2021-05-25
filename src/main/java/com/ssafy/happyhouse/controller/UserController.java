@@ -67,10 +67,11 @@ public class UserController {
 			uService.insert(user);
 			m.addAttribute("msg","회원 등록 성공 "+user.getName()+" 님 반갑습니다.");
 
-		}catch(SQLIntegrityConstraintViolationException e) {
-			m.addAttribute("msg","회원 등록 실패 :"+user.getId()+" 는 이미 사용중입니다.");
+//		}catch(SQLIntegrityConstraintViolationException e) {
+//			m.addAttribute("msg","회원 등록 실패 :"+user.getId()+" 는 이미 사용중입니다.");
 
 		}catch(Exception e) {
+			m.addAttribute("msg","회원 등록 실패 "+user.getId()+" 는 이미 사용중입니다.");
 			e.printStackTrace();
 		}
 		
@@ -99,7 +100,7 @@ public class UserController {
 			iService.delete(user.getId(),inter.getDong());
 			if(session!=null)session.invalidate();
 			
-			m.addAttribute("msg","탈퇴 완료 ㅠㅠ");
+			m.addAttribute("msg","탈퇴 완료");
 		} catch(Exception e) {
 			m.addAttribute("msg","탈퇴 실패");
 			e.printStackTrace();
