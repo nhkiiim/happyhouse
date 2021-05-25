@@ -11,5 +11,6 @@ public interface UserRepo {
 	void delete(String id) throws SQLException;
 	void update(User user) throws SQLException;
 	void sendMail(String pwd, String address, String id)throws SQLException;
-	User findPwd(User user)throws SQLException;
+	User findPwd(String id, String name, String phone)throws SQLException;
+	void resetPwd(String id, String pass) throws SQLException;
 }

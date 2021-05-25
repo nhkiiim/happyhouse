@@ -17,11 +17,7 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	UserRepo urepo;
 	
-	@Autowired
-	JavaMailSender mailSender;
-	private static final String FROM_ADDRESS = "";
 	
-
 	
 	@Override
 	public User select(String id) throws SQLException {
@@ -43,19 +39,15 @@ public class UserServiceImpl implements UserService {
 		urepo.update(user);
 	}
 	
-	public User sendMail(String pwd, String address, String id) throws SQLException {
-		SimpleMailMessage message = new SimpleMailMessage();
-		message.setTo(address);
-		message.setFrom(FROM_ADDRESS);
-		message.setSubject("HappyHouse 비밀번호찾기 안내 메일입니다.");
-		message.setText(pwd + "," +address);
-		mailSender.send(message);
-		return urepo.select(id);
-	}
 
 	@Override
-	public User findPwd(User user) throws SQLException {
-		return urepo.findPwd(user);
+	public User findPwd(String id, String name, String phone) throws SQLException {
+		String pass = "";
+		for (int i = 0; i < 12; i++) {
+			pass += (char) ((Math.random() * 26) + 97);
+		}
+		urepo.resetPwd(id, pass);
+		return urepo.findPwd(id, name, phone);
 	}
 
 }
