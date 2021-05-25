@@ -36,6 +36,11 @@ public class SchoolController {
 		// session.setAttribute("schools", schools);
 		return "index";
 	}
+	
+	@GetMapping("/gotoschool")
+	   public String exRedirect(String schoolurl) {
+	       return "redirect:"+schoolurl;
+	   }
 
 	/*
 	 * @GetMapping("/school" ) public String list(HttpSession session) throws

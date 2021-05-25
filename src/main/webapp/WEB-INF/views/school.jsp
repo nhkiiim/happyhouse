@@ -75,7 +75,7 @@
 									<%-- <td><a href="${root}/view?no=${school.no}">${school.aptName}</a></td> --%>
 									<td>${school.address1} ${school.dong} ${school.address2}</td>
 									<td>${school.coed}</td>
-									<td>${school.url}</td>
+									<td><form id="listform" action="gotoschool" method="get" name="schoolurl" value="${school.url}">${school.url}</form></td>
 								</tr>
 							</c:forEach>
 
