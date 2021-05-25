@@ -30,9 +30,9 @@
 								placeholder="User Name" required>
 						</div>
 						<div class="row mb-3">
-							<label class="col-md-3" for="jAddress">주소
+							<label class="col-md-3" for="jAddress">이메일
 								*</label> <input class="col-md-9 form-control" id="jAddress" name="address" type="text"
-								placeholder="address" required>
+								placeholder="e-mail" required>
 						</div>
 						<div class="row mb-3">
 							<label class="col-md-3" for="jCellphone">전화번호

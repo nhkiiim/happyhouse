@@ -79,6 +79,9 @@
 			<li><a href="#" class="loginoff" data-toggle="modal"data-target="#userInfoModal" >${userinfo.name}님 정보조회</a></li>
 			<li><a href="${root}/logout" class="loginoff" id="btn-logout">로그아웃</a></li>
 			<li><a href="#" class="loginoff" data-toggle="modal"data-target="#changeModal" >회원수정</a></li>
+			<c:if test="${userinfo.id eq 'admin'}">
+				<li><a href="#" class="loginoff" data-toggle="modal"data-target="#sendModal" >메일 발송</a></li>
+       		</c:if>
 			<li><a href="#" class="loginoff"  data-toggle="modal"data-target="#out">탈퇴</a></li>
 			</c:if>
 	        </ul>
