@@ -24,7 +24,7 @@
 							<label class="col" for="uersInfo_uName">이름 : ${userinfo.name}</label>
 						</div>
 						<div class="row mb-3">
-							<label class="col" for="uersInfo_uAddress">주소 : ${userinfo.address}</label>
+							<label class="col" for="uersInfo_uAddress">이메일 : ${userinfo.address}</label>
 						</div>
 						<div class="row mb-3">
 							<label class="col" for="uersInfo_uCellphone">전화번호	 : ${userinfo.phone}</label>

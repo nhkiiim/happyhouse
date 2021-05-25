@@ -40,5 +40,10 @@ public class SchoolController {
 		}
 		return "index";
 	}
+	
+	@GetMapping("/gotoschool")
+	   public String exRedirect(String schoolurl) {
+	       return "redirect:"+schoolurl;
+	   }
 
 }

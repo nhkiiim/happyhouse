@@ -9,9 +9,11 @@
             <div class="col-lg-6">
               <h3 class="mt-5">Welcome to Happy House Sping10Jo</h3>
               <p class="mb-5 mt-2">최신 정보 구독을 위해 이메일을 입력하세요! </p>
-              <form action="email" method="post" class="mb-5 mt-5">
+              
+              <form action="subscribe" method="post" class="mb-5 mt-5">
                 <input type="email" name="email"><input type="submit" value="Subscribe">
               </form>
+              
             </div>
           </div>
         </div>

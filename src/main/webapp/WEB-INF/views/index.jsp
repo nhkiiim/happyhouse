@@ -98,6 +98,9 @@
 
 	<!-- Modal findpass -->
 	<%@ include file="/WEB-INF/views/members/findpass.jsp"%>
+	
+	<!-- Modal sendsubscribe -->
+	<%@ include file="/WEB-INF/views/members/sendmail.jsp"%>
 
 	<!-- Modal Notice -->
 	<%@ include file="/WEB-INF/views/insertnotice.jsp"%>

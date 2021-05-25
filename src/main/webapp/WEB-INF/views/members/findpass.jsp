@@ -31,7 +31,8 @@ $(function(){
 				<!-- Modal body -->
 				<div class="modal-body">
 					<div class="container">
-						<div class="form-group mt-2 mb-2">
+					
+						<form action="findpwd" method="post" class="form-group mt-2 mb-2">
 						<div class="row mb-3">
 							<label class="col-md-3" for="jid">아이디 *</label>
 							<input class="col-md-9 form-control" id="userid" name="id" type="text" required>
@@ -39,7 +40,7 @@ $(function(){
 						<div class="row mb-3">
 							<label class="col-md-3" for="jName">이름
 								*</label> <input class="col-md-9 form-control" id="jName" name="name" type="text"
-								placeholder="User Name" required>
+								required>
 						</div>
 						<div class="row mb-3">
 							<label class="col-md-3" for="jCellphone">전화번호
@@ -47,19 +48,17 @@ $(function(){
 								type="text" placeholder="010-xxxx-xxxx" required>
 						</div>
 						<br>
-							<div class="row mb-3">
-							<label class="col" for="uersInfo_uPassword"><span id="pass"></span></label>
+							
+						
+						<div class="container d-flex justify-content-center">
+							<input type="submit" class="btn btn-success mr-2 col-3"></input>
 						</div>
-					
-						</div>
+						
+						
+						</form>
 					</div>
 				</div>
-				<!-- Modal footer -->
-				<div class="modal-footer">
-					<div class="container d-flex justify-content-center">
-						<button id="findbutton" type="button" class="btn btn-success mr-2 col-3">찾기</button>
-					</div>
-				</div>
+				
 			</div>
 		</div>
 	</div>

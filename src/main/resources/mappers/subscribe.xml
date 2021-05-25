@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.happyhouse.model.repo.SubscribeRepo">
+	<insert id="insert">
+		insert into subscribe values (#{email})
+	</insert>
+	<select id="select" resultType="Subscribe">
+		select * from subscribe where email=#{email}
+	</select>
+	<select id="search" resultType="Subscribe">
+		select * from subscribe
+	</select>
+</mapper>

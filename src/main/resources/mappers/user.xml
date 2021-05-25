@@ -14,4 +14,10 @@
 	<update id="update">
 	update user set pass=#{pass}, name=#{name}, address=#{address},phone=#{phone} where id=#{id} 
 	</update>
+	<select id="findPwd" resultType="User">
+		select id, name, pass, address, phone from user where id = #{id} and name=#{name} and phone=#{phone}
+	</select>
+	<update id="resetPwd">
+		update user set pass = #{pass} where id = #{id}
+	</update>
 </mapper>

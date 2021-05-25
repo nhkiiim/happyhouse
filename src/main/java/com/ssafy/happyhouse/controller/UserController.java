@@ -108,12 +108,7 @@ public class UserController {
 		return "index";
 	}
 	
-	@GetMapping("/find")
-	public String find(String uid, Model m) throws SQLException {
-		User user=uService.select(uid);
-		if(user==null) m.addAttribute("result","존재하지 않는 회원입니다.");
-		else m.addAttribute("result","비밀번호 &nbsp;:&nbsp;"+user.getPass());
-		return "members/desc";
-	}
+	
+	
 
 }
