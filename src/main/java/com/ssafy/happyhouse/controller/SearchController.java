@@ -100,10 +100,14 @@ public class SearchController {
 		int b=hService.avg80(dong);
 		int c=hService.avg100(dong);
 		int d=hService.avg140(dong);
-		m.addAttribute("avg60", a*1000);	
-		m.addAttribute("avg80", b*1000);	
-		m.addAttribute("avg100", c*1000);	
-		m.addAttribute("avg140", d*1000);	
+		m.addAttribute("avg60bili", a/10);	
+		m.addAttribute("avg80bili", b/10);	
+		m.addAttribute("avg100bili", c/10);	
+		m.addAttribute("avg140bili", d/10);
+		m.addAttribute("avg60", (a%10));	
+		m.addAttribute("avg80", (b%10));	
+		m.addAttribute("avg100", (c%10));	
+		m.addAttribute("avg140", (d%10));
 		m.addAttribute("avgDong", dong);	
 		return "index";
 	}

@@ -7,6 +7,7 @@
 
 .counts .count-box {
   padding: 30px 30px 25px 30px;
+  height: 135px;
   width: 100%;
   position: relative;
   text-align: center;
@@ -46,7 +47,7 @@
 		<div class="section-title" data-aos="fade-down">
 			<span>average price</span>
 			<h2>average price</h2>
-			  <h6 class="mt-2">동별 매물 면적에 따른 평균 가격 정보를 확인하세요 ( 단위 : 만원 )</h6>
+			  <h6 class="mt-2">동별 매물 면적에 따른 평균 가격 정보를 확인하세요</h6>
 		</div>
 
 		<div class="mb-3">
@@ -71,8 +72,7 @@
             <div class="count-box">
               <i class="icofont-user-alt-6"></i>
             	<c:if test="${!empty avgDong}">	
-              <span data-toggle="counter-up">${avg60}</span>
-              </c:if>
+              <span data-toggle="counter-up" style="font-size: 30px"><c:if test="${!empty avg60bili}">${avg60bili}억</c:if><c:if test="${avg60!=0}"> ${avg60}천</c:if></span></c:if>
               <c:if test="${empty avgDong}">	
               <span data-toggle="counter-up">?</span>
               </c:if>
@@ -84,7 +84,7 @@
             <div class="count-box">
               <i class="icofont-home"></i>
               <c:if test="${!empty avgDong}">
-              <span data-toggle="counter-up">${avg80}</span>
+              <span data-toggle="counter-up" style="font-size: 30px"><c:if test="${!empty avg80bili}">${avg80bili}억</c:if><c:if test="${avg80!=0}"> ${avg80}천</c:if></span>
               </c:if>
               <c:if test="${empty avgDong}">	
               <span data-toggle="counter-up">?</span>
@@ -97,7 +97,7 @@
             <div class="count-box">
               <i class="icofont-building"></i>
               <c:if test="${!empty avgDong}">
-              <span data-toggle="counter-up">${avg100}</span>
+              <span data-toggle="counter-up" style="font-size: 30px"><c:if test="${!empty avg100bili}">${avg100bili}억</c:if><c:if test="${avg100!=0}"> ${avg100}천</c:if></span>
               </c:if>
               <c:if test="${empty avgDong}">	
               <span data-toggle="counter-up">?</span>
@@ -110,7 +110,7 @@
             <div class="count-box">
               <i class="icofont-users"></i>
               <c:if test="${!empty avgDong}">
-              <span data-toggle="counter-up">${avg140}</span>
+              <span data-toggle="counter-up" style="font-size: 30px"><c:if test="${!empty avg140bili}">${avg140bili}억</c:if><c:if test="${avg140!=0}"> ${avg140}천</c:if></span>
               </c:if>
               <c:if test="${empty avgDong}">	
               <span data-toggle="counter-up">?</span>

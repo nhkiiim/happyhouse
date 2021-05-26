@@ -22,7 +22,7 @@
 						</div>
 						<div class="row mb-3">
 							<label class="col-md-3" for="sContent">내용
-								*</label> <textarea class="col-md-9 form-control" id="sContent" name="content" type="text"
+								*</label> <textarea class="col-md-9 form-control h-25" id="sContent" name="content" type="text"
 								required></textarea>
 						</div>
 						</div>
