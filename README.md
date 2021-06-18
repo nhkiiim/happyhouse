@@ -9,6 +9,7 @@
 ## 🛠 &nbsp;Tech Stack
 
   * **Front End**   
+    * JSP
     * Vue.js   
 
   * **Back End**   
