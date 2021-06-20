@@ -25,7 +25,7 @@
     
     아파트 매물을 간편하게 검색하고, 다양한 정보를 통해 쉽게 비교 분석 가능한 아파트 주택 매물 통합 검색 서비스 제공
     
- <br><img width="800" alt="스크린샷 2021-06-10 오전 5 24 01" src="https://user-images.githubusercontent.com/59560592/121424244-17747c80-c9ac-11eb-87ca-13251b5b3ede.png">!
+ <br><img width="800" alt="스크린샷 2021-06-10 오전 5 24 01" src="https://user-images.githubusercontent.com/59560592/121424244-17747c80-c9ac-11eb-87ca-13251b5b3ede.png">
  
 
 
