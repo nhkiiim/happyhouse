@@ -8,15 +8,15 @@
   
 ## 🛠 &nbsp;Tech Stack
 
-  * **Front End**   
+  * **_Front End_**   
     * JSP
     * Vue.js   
 
-  * **Back End**   
+  * **_Back End_**   
     * Spring boot
     * MyBatis   
 
-  * **ect.**   
+  * **_ect._**   
     * MySQL
     * Google SMTP
     * Kakao Map API
